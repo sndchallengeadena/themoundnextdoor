@@ -410,13 +410,13 @@ img[src*="Pipe.png"] {
         max-width: 88% !important;
         width: 100% !important;
         padding: 2.25rem 1.5rem !important;
-        text-align: center !important;      /* Snaps text headings to dead center */
-        border: none !important;            /* Wipes out secondary grey bar lines */
+        text-align: center !important;      
+        border: none !important;            
         box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4) !important;
     }
 
     .step-content h2, .step-content p {
-        text-align: center !important;      /* Snaps paragraph descriptions to center */
+        text-align: center !important;      
     }
 
     /* Safe interactive asset tracking parameters */
