@@ -373,23 +373,29 @@ img[src*="Pipe.png"] {
 }
 
 /* ==========================================================================
-   MOBILE-ONLY INTERACTIVE MAP OVERRIDES
+   MOBILE-ONLY RESPONSIVE OVERRIDES
    ========================================================================== */
 @media (max-width: 768px) {
-    /* Ensure the container establishes the exact boundary scale for pins */
+    /* Prevent widescreen backgrounds from getting chopped off on thin mobile views */
+    .scrolly-bg-img {
+        object-fit: contain !important;
+        background-color: #111 !important; 
+    }
+
+    /* Ensure map container frames Tap target pins precisely */
     .interactive-map-holder {
         max-width: 100% !important;
         margin: 2rem auto !important;
         position: relative !important;
     }
 
-    /* Scale down the hotspot pins slightly so they sit better on smaller displays */
+    /* Scale down hotspot pins slightly to fit phone graphic sizing */
     .map-hotspot-pin {
         width: 28px !important;
         height: 28px !important;
     }
 
-    /* Fix the floating tooltip so it stays anchored inside the viewport area */
+    /* Keep descriptive text blocks anchored safely beneath mobile maps */
     .map-hover-tooltip {
         position: absolute !important;
         left: 50% !important;
