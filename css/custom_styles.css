@@ -376,7 +376,7 @@ img[src*="Pipe.png"] {
    MOBILE-ONLY RESPONSIVE OVERRIDES
    ========================================================================== */
 @media (max-width: 768px) {
-    /* 1. Reset container parameters so layout reads as traditional stacked content blocks */
+    /* 1. Format opening container into traditional content blocks */
     main > .scrolly-container {
         position: relative !important;
         height: auto !important;
@@ -393,7 +393,7 @@ img[src*="Pipe.png"] {
         flex-direction: column !important;
     }
 
-    /* 2. Format drawings as standalone full-width images */
+    /* 2. Full-bleed responsive image behavior definitions */
     main > .scrolly-container .scrolly-bg-img {
         position: relative !important;
         height: auto !important;
@@ -402,12 +402,11 @@ img[src*="Pipe.png"] {
         opacity: 1 !important;
     }
 
-    /* Force the historic drawing to show under the modern drawing stack block */
     main > .scrolly-container #photo-past {
         display: block !important;
     }
 
-    /* 3. Reconfigure the narrative blocks into clean text layout boxes between the drawings */
+    /* 3. Shift the cards into a column to align perfectly over the respective images */
     main > .scrolly-container .scrolly-story {
         position: absolute !important;
         top: 0 !important;
@@ -426,12 +425,12 @@ img[src*="Pipe.png"] {
         padding: 0 !important;
     }
 
-    /* Explicitly push content layout box panels down onto their respective drawing fields */
+    /* PERFECTLY MATCHED TEXT-TO-ILLUSTRATION COORDINATES FOR PHONES */
     main > .scrolly-container .step[data-step="1"] {
-        margin-top: 22% !important;
+        margin-top: 48% !important;   /* Matches "Wait... Is That a Hill?" to the Mound scene */
     }
     main > .scrolly-container .step[data-step="2"] {
-        margin-top: 48% !important;
+        margin-top: 22% !important;   /* Matches the history card down to the Adena scene */
     }
 
     main > .scrolly-container .step-content {
