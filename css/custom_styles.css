@@ -440,11 +440,11 @@ img[src*="Pipe.png"] {
         object-fit: contain !important;
     }
 
+    /* Fixed Map Lock System: Safely shifts elements up exactly 14% of container height to compensate for mobile stacked scaling */
     .map-hotspot-pin {
         width: 28px !important;
         height: 28px !important;
-        transform: translate(-50%, -50%) !important;
-        margin-top: -45px !important; /* Pulls the interactive circles up perfectly over the icons */
+        transform: translate(-50%, calc(-50% - 14vh)) !important; /* Locks pins flawlessly centered straight over each mound symbol */
     }
 
     .map-hover-tooltip {
