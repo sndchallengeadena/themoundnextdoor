@@ -372,31 +372,94 @@ img[src*="Pipe.png"] {
    MOBILE-ONLY RESPONSIVE OVERRIDES
    ========================================================================== */
 @media (max-width: 768px) {
-    /* Safe opening sticky framework heights for clean scrolling on mobile */
-    .scrolly-visual {
-        height: 65vh !important;
-    }
-    .scrolly-bg-img {
-        object-fit: cover !important;
-        object-position: center center !important;
-    }
-    .scrolly-story {
-        margin-top: -65vh !important;
+    /* 1. Reset top container completely into clear, natural column layout blocks */
+    main > .scrolly-container {
+        position: relative !important;
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        background-color: #111 !important;
     }
 
+    main > .scrolly-container .scrolly-visual {
+        position: relative !important;
+        height: auto !important;
+        overflow: visible !important;
+        background-color: #111 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* Flatten out images so they sit as clean structural rows */
+    main > .scrolly-container .scrolly-bg-img {
+        position: relative !important;
+        height: auto !important;
+        width: 100% !important;
+        object-fit: contain !important;
+        opacity: 1 !important;
+    }
+
+    /* Enforce the exact row order: Neighborhood (Present) first, then Ancient (Past) */
+    main > .scrolly-container #photo-present {
+        order: 1 !important;
+    }
+    main > .scrolly-container #photo-past {
+        order: 3 !important;
+        display: block !important;
+    }
+
+    /* 2. Position text blocks natively right inside the image block stream */
+    main > .scrolly-container .scrolly-story {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        margin-top: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        z-index: 5 !important;
+    }
+
+    main > .scrolly-container .step {
+        height: auto !important;
+        position: absolute !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 90% !important;
+        padding: 0 !important;
+    }
+
+    /* Snap cards beautifully over their respective drawings */
+    main > .scrolly-container .step[data-step="1"] {
+        order: 2 !important;
+        top: 22% !important;
+    }
+    main > .scrolly-container .step[data-step="2"] {
+        order: 4 !important;
+        top: 72% !important;
+    }
+
+    main > .scrolly-container .step-content {
+        opacity: 1 !important;
+        transform: none !important;
+        width: 100% !important;
+        padding: 1.25rem !important;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+    }
+
+    /* 3. Map Highlights: Anchored precisely to sit right over icons on mobile viewports */
     .interactive-map-holder {
         max-width: 100% !important;
         margin: 2rem auto !important;
         position: relative !important;
     }
 
-    /* Fixed: Perfectly targets pins over the circles on mobile layout screens */
     .map-hotspot-pin {
-        width: 26px !important;
-        height: 26px !important;
-        transform: translate(-50%, 5px) !important;
+        width: 28px !important;
+        height: 28px !important;
+        transform: translate(-50%, -50%) !important;
     }
 
+    /* Professional persistent app-style notification tray asset for mobile captions */
     .map-hover-tooltip {
         position: fixed !important;
         left: 50% !important;

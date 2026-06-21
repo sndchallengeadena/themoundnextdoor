@@ -28,10 +28,10 @@
     <meta name="twitter:image" content="https://sndchallengeadena.github.io/themoundnextdoor/images/meta/meta_og_index.jpg">
     <meta name="twitter:site" content="@SND" />
 
-    <link rel="icon" type="image/png" href="images/favicon/myfavicon-96x96.png?v=1" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="images/favicon/myfavicon.svg?v=1" />
-    <link rel="shortcut icon" href="images/favicon/myfavicon.ico?v=1" />
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/myapple-touch-icon.png?v=1" />
+    <link rel="icon" type="image/png" href="images/favicon/myfavicon-96x96.png?v=3" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon/myfavicon.svg?v=3" />
+    <link rel="shortcut icon" href="images/favicon/myfavicon.ico?v=3" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/myapple-touch-icon.png?v=3" />
     <link rel="manifest" href="site.webmanifest" />
 </head>
 
@@ -87,26 +87,29 @@
 
     <script>
         window.addEventListener("scroll", () => {
-            const presentPhoto = document.getElementById('photo-present');
-            const steps = document.querySelectorAll('.step');
-            
-            if (presentPhoto && steps.length >= 2) {
-                const step1Rect = steps[0].getBoundingClientRect();
-                const step2Rect = steps[1].getBoundingClientRect();
+            // Only execute opening animation frames if screen width corresponds to desktop displays
+            if (window.innerWidth > 768) {
+                const presentPhoto = document.getElementById('photo-present');
+                const steps = document.querySelectorAll('.step');
+                
+                if (presentPhoto && steps.length >= 2) {
+                    const step1Rect = steps[0].getBoundingClientRect();
+                    const step2Rect = steps[1].getBoundingClientRect();
 
-                if (step1Rect.top >= -window.innerHeight / 2 && step1Rect.top < window.innerHeight / 2) {
-                    steps[0].classList.add('active');
-                    steps[1].classList.remove('active');
-                } else if (step2Rect.top >= -window.innerHeight / 2 && step2Rect.top < window.innerHeight / 2) {
-                    steps[0].classList.remove('active');
-                    steps[1].classList.add('active');
+                    if (step1Rect.top >= -window.innerHeight / 2 && step1Rect.top < window.innerHeight / 2) {
+                        steps[0].classList.add('active');
+                        steps[1].classList.remove('active');
+                    } else if (step2Rect.top >= -window.innerHeight / 2 && step2Rect.top < window.innerHeight / 2) {
+                        steps[0].classList.remove('active');
+                        steps[1].classList.add('active');
+                    }
+
+                    let fadeProgress = (window.innerHeight - step2Rect.top) / window.innerHeight;
+                    if (fadeProgress < 0) fadeProgress = 0;
+                    if (fadeProgress > 1) fadeProgress = 1;
+
+                    presentPhoto.style.opacity = (1 - fadeProgress);
                 }
-
-                let fadeProgress = (window.innerHeight - step2Rect.top) / window.innerHeight;
-                if (fadeProgress < 0) fadeProgress = 0;
-                if (fadeProgress > 1) fadeProgress = 1;
-
-                presentPhoto.style.opacity = (1 - fadeProgress);
             }
 
             const era1Steps = document.querySelectorAll('.era1-step');
