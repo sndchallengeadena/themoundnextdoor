@@ -376,26 +376,34 @@ img[src*="Pipe.png"] {
    MOBILE-ONLY RESPONSIVE OVERRIDES
    ========================================================================== */
 @media (max-width: 768px) {
-    /* Stretch backgrounds full screen while locking the focal point dead center */
+    /* Scales background to fill viewport smoothly with moderate zoom, killing black bars */
+    .scrolly-visual {
+        height: 60vh !important;
+    }
     .scrolly-bg-img {
+        height: 100% !important;
         object-fit: cover !important;
         object-position: center center !important;
     }
+    .scrolly-story {
+        margin-top: -60vh !important;
+    }
 
-    /* Ensure map container frames Tap target pins precisely */
+    /* Keep map container scaled properly */
     .interactive-map-holder {
         max-width: 100% !important;
         margin: 2rem auto !important;
         position: relative !important;
     }
 
-    /* Scale down hotspot pins slightly to fit phone graphic sizing */
+    /* Hotspot pins: Nudged upward cleanly using vertical translate */
     .map-hotspot-pin {
         width: 28px !important;
         height: 28px !important;
+        transform: translate(-50%, -110%) !important;
     }
 
-    /* Keep descriptive text blocks anchored safely beneath mobile maps */
+    /* Tooltip content box fixed cleanly right beneath map graphics */
     .map-hover-tooltip {
         position: absolute !important;
         left: 50% !important;
