@@ -371,3 +371,33 @@ img[src*="Pipe.png"] {
     font-weight: bold !important;
     letter-spacing: 0.01em !important;
 }
+
+/* ==========================================================================
+   MOBILE-ONLY INTERACTIVE MAP OVERRIDES
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Ensure the container establishes the exact boundary scale for pins */
+    .interactive-map-holder {
+        max-width: 100% !important;
+        margin: 2rem auto !important;
+        position: relative !important;
+    }
+
+    /* Scale down the hotspot pins slightly so they sit better on smaller displays */
+    .map-hotspot-pin {
+        width: 28px !important;
+        height: 28px !important;
+    }
+
+    /* Fix the floating tooltip so it stays anchored inside the viewport area */
+    .map-hover-tooltip {
+        position: absolute !important;
+        left: 50% !important;
+        top: auto !important;
+        bottom: -75px !important; 
+        transform: translateX(-50%) !important;
+        width: 95% !important;
+        max-width: 340px !important;
+        box-sizing: border-box !important;
+    }
+}
