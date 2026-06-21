@@ -372,7 +372,7 @@ img[src*="Pipe.png"] {
    MOBILE-ONLY RESPONSIVE OVERRIDES
    ========================================================================== */
 @media (max-width: 768px) {
-    /* Breakout viewport logic to force opening scrolly to hit 100% full bleed edges */
+    /* Full bleed edge breakout system for introduction scrolly container */
     main > .scrolly-container {
         width: 100vw !important;
         position: relative !important;
@@ -396,7 +396,7 @@ img[src*="Pipe.png"] {
         margin-top: -100vh !important;
     }
 
-    /* Centers the card wrapper container grid perfectly on mobile devices */
+    /* Formats card layout boxes to sit perfectly vertical and horizontal centered */
     .step {
         height: 100vh !important;
         display: flex !important;
@@ -405,7 +405,7 @@ img[src*="Pipe.png"] {
         padding: 1.5rem !important;
     }
 
-    /* Fixed: Centers text internal alignment and wipes away the grey border double artifact outline lines */
+    /* Disables grey bar line artifacts and forces centered text formatting alignments */
     .step-content {
         max-width: 88% !important;
         width: 100% !important;
@@ -419,28 +419,20 @@ img[src*="Pipe.png"] {
         text-align: center !important;      
     }
 
-    /* Fixed Map Coordinate Locking Systems for Portables */
+    /* Safe interactive asset tracing parameters */
     .interactive-map-holder {
         max-width: 100% !important;
-        width: 100% !important;
         margin: 2rem auto !important;
         position: relative !important;
         display: block !important;
-        aspect-ratio: 650 / 450 !important; /* Locks parent bounding container precisely to graphic proportions */
     }
 
-    .interactive-map-holder img {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: contain !important;
-        display: block !important;
-    }
-
+    /* Precision adjustment: Shifts pins cleanly downwards onto the map graphics on phones */
     .map-hotspot-pin {
         width: 32px !important;
         height: 32px !important;
         transform: translate(-50%, -50%) !important;
-        margin-top: 0 !important;
+        margin-top: 25px !important; /* Perfect pixel downward offset balance override */
     }
 
     .map-hover-tooltip {
