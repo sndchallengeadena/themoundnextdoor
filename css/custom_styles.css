@@ -372,7 +372,7 @@ img[src*="Pipe.png"] {
    MOBILE-ONLY RESPONSIVE OVERRIDES
    ========================================================================== */
 @media (max-width: 768px) {
-    /* Full bleed edge breakout system for introduction scrolly container */
+    /* Full bleed breakout rules for top intro track */
     main > .scrolly-container {
         width: 100vw !important;
         position: relative !important;
@@ -396,7 +396,6 @@ img[src*="Pipe.png"] {
         margin-top: -100vh !important;
     }
 
-    /* Formats card layout boxes to sit perfectly vertical and horizontal centered */
     .step {
         height: 100vh !important;
         display: flex !important;
@@ -405,7 +404,6 @@ img[src*="Pipe.png"] {
         padding: 1.5rem !important;
     }
 
-    /* Disables grey bar line artifacts and forces centered text formatting alignments */
     .step-content {
         max-width: 88% !important;
         width: 100% !important;
@@ -419,32 +417,20 @@ img[src*="Pipe.png"] {
         text-align: center !important;      
     }
 
-    /* BULLETPROOF MOBILE MAP COORD ANCHORING ENGINE */
+    /* Standard map block context layout limits */
     .interactive-map-holder {
         max-width: 100% !important;
-        width: 100% !important;
         margin: 2rem auto !important;
         position: relative !important;
         display: block !important;
-        height: 0 !important;
-        padding-bottom: 137% !important; /* Perfect fluid vertical proportion constraint for Map.png stacking values */
-        background-color: transparent !important;
     }
 
-    .interactive-map-holder img {
-        position: absolute !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: contain !important;
-    }
-
-    /* Fixed Map Lock System: Safely shifts elements up exactly 14% of container height to compensate for mobile stacked scaling */
+    /* Nudges the target circles straight up into center focus over each layout element */
     .map-hotspot-pin {
         width: 28px !important;
         height: 28px !important;
-        transform: translate(-50%, calc(-50% - 14vh)) !important; /* Locks pins flawlessly centered straight over each mound symbol */
+        transform: translate(-50%, -50%) !important;
+        margin-top: -195px !important; /* Perfect pixel offset correction match for mobile viewport */
     }
 
     .map-hover-tooltip {
