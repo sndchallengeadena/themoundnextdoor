@@ -28,10 +28,10 @@
     <meta name="twitter:image" content="https://sndchallengeadena.github.io/themoundnextdoor/images/meta/meta_og_index.jpg">
     <meta name="twitter:site" content="@SND" />
 
-    <link rel="icon" type="image/png" href="images/favicon/myfavicon-96x96.png?v=4" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="images/favicon/myfavicon.svg?v=4" />
-    <link rel="shortcut icon" href="images/favicon/myfavicon.ico?v=4" />
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/myapple-touch-icon.png?v=4" />
+    <link rel="icon" type="image/png" href="images/favicon/myfavicon-96x96.png?v=5" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon/myfavicon.svg?v=5" />
+    <link rel="shortcut icon" href="images/favicon/myfavicon.ico?v=5" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/myapple-touch-icon.png?v=5" />
     <link rel="manifest" href="site.webmanifest" />
 </head>
 
@@ -87,31 +87,30 @@
 
     <script>
         window.addEventListener("scroll", () => {
-            // Only execute opening animation frames if screen width corresponds to desktop displays
-            if (window.innerWidth > 768) {
-                const presentPhoto = document.getElementById('photo-present');
-                const steps = document.querySelectorAll('.step');
-                
-                if (presentPhoto && steps.length >= 2) {
-                    const step1Rect = steps[0].getBoundingClientRect();
-                    const step2Rect = steps[1].getBoundingClientRect();
+            // --- FRAMEWORK 1: OPENING SCROLLY (Reactivated for both desktop and mobile viewports) ---
+            const presentPhoto = document.getElementById('photo-present');
+            const steps = document.querySelectorAll('.step');
+            
+            if (presentPhoto && steps.length >= 2) {
+                const step1Rect = steps[0].getBoundingClientRect();
+                const step2Rect = steps[1].getBoundingClientRect();
 
-                    if (step1Rect.top >= -window.innerHeight / 2 && step1Rect.top < window.innerHeight / 2) {
-                        steps[0].classList.add('active');
-                        steps[1].classList.remove('active');
-                    } else if (step2Rect.top >= -window.innerHeight / 2 && step2Rect.top < window.innerHeight / 2) {
-                        steps[0].classList.remove('active');
-                        steps[1].classList.add('active');
-                    }
-
-                    let fadeProgress = (window.innerHeight - step2Rect.top) / window.innerHeight;
-                    if (fadeProgress < 0) fadeProgress = 0;
-                    if (fadeProgress > 1) fadeProgress = 1;
-
-                    presentPhoto.style.opacity = (1 - fadeProgress);
+                if (step1Rect.top >= -window.innerHeight / 2 && step1Rect.top < window.innerHeight / 2) {
+                    steps[0].classList.add('active');
+                    steps[1].classList.remove('active');
+                } else if (step2Rect.top >= -window.innerHeight / 2 && step2Rect.top < window.innerHeight / 2) {
+                    steps[0].classList.remove('active');
+                    steps[1].classList.add('active');
                 }
+
+                let fadeProgress = (window.innerHeight - step2Rect.top) / window.innerHeight;
+                if (fadeProgress < 0) fadeProgress = 0;
+                if (fadeProgress > 1) fadeProgress = 1;
+
+                presentPhoto.style.opacity = (1 - fadeProgress);
             }
 
+            // --- FRAMEWORK 2: ERA 1 SINGLE IMAGE SCROLLY ---
             const era1Steps = document.querySelectorAll('.era1-step');
             if (era1Steps.length >= 2) {
                 const era1Rect1 = era1Steps[0].getBoundingClientRect();
@@ -126,6 +125,7 @@
                 }
             }
 
+            // --- FRAMEWORK 3: ERA 2 TWO-IMAGE SCROLLY ---
             const era2Photo1 = document.getElementById('photo-era2-1');
             const era2Steps = document.querySelectorAll('.era2-step');
             if (era2Photo1 && era2Steps.length >= 2) {
@@ -147,6 +147,7 @@
                 era2Photo1.style.opacity = (1 - fadeProgress2);
             }
 
+            // --- FRAMEWORK 4: ERA 3 TWO-IMAGE SCROLLY ---
             const era3Photo1 = document.getElementById('photo-era3-1');
             const era3Steps = document.querySelectorAll('.era3-step');
             if (era3Photo1 && era3Steps.length >= 2) {
@@ -168,6 +169,7 @@
                 era3Photo1.style.opacity = (1 - fadeProgress3);
             }
 
+            // --- FRAMEWORK 6: ERA 4 TWO-IMAGE SCROLLY ---
             const era4Photo1 = document.getElementById('photo-era4-1');
             const era4Steps = document.querySelectorAll('.era4-step');
             if (era4Photo1 && era4Steps.length >= 2) {
@@ -189,6 +191,7 @@
                 era4Photo1.style.opacity = (1 - fadeProgress4);
             }
 
+            // --- EXTRA FRAMEWORK: INLINE MAN SCROLLY ---
             const manSteps = document.querySelectorAll('.man-step');
             manSteps.forEach((step) => {
                 const rect = step.getBoundingClientRect();
