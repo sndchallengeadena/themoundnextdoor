@@ -28,10 +28,10 @@
     <meta name="twitter:image" content="https://sndchallengeadena.github.io/themoundnextdoor/images/meta/meta_og_index.jpg">
     <meta name="twitter:site" content="@SND" />
 
-    <link rel="icon" type="image/png" href="images/favicon/myfavicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="images/favicon/myfavicon.svg" />
-    <link rel="shortcut icon" href="images/favicon/myfavicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/myapple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="images/favicon/myfavicon-96x96.png?v=1" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon/myfavicon.svg?v=1" />
+    <link rel="shortcut icon" href="images/favicon/myfavicon.ico?v=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/myapple-touch-icon.png?v=1" />
     <link rel="manifest" href="site.webmanifest" />
 </head>
 
@@ -87,7 +87,6 @@
 
     <script>
         window.addEventListener("scroll", () => {
-            // --- FRAMEWORK 1: OPENING SCROLLY ---
             const presentPhoto = document.getElementById('photo-present');
             const steps = document.querySelectorAll('.step');
             
@@ -110,7 +109,6 @@
                 presentPhoto.style.opacity = (1 - fadeProgress);
             }
 
-            // --- FRAMEWORK 2: ERA 1 SINGLE IMAGE SCROLLY ---
             const era1Steps = document.querySelectorAll('.era1-step');
             if (era1Steps.length >= 2) {
                 const era1Rect1 = era1Steps[0].getBoundingClientRect();
@@ -125,7 +123,6 @@
                 }
             }
 
-            // --- FRAMEWORK 3: ERA 2 TWO-IMAGE SCROLLY ---
             const era2Photo1 = document.getElementById('photo-era2-1');
             const era2Steps = document.querySelectorAll('.era2-step');
             if (era2Photo1 && era2Steps.length >= 2) {
@@ -147,7 +144,6 @@
                 era2Photo1.style.opacity = (1 - fadeProgress2);
             }
 
-            // --- FRAMEWORK 4: ERA 3 TWO-IMAGE SCROLLY ---
             const era3Photo1 = document.getElementById('photo-era3-1');
             const era3Steps = document.querySelectorAll('.era3-step');
             if (era3Photo1 && era3Steps.length >= 2) {
@@ -169,7 +165,6 @@
                 era3Photo1.style.opacity = (1 - fadeProgress3);
             }
 
-            // --- FRAMEWORK 6: ERA 4 TWO-IMAGE SCROLLY ---
             const era4Photo1 = document.getElementById('photo-era4-1');
             const era4Steps = document.querySelectorAll('.era4-step');
             if (era4Photo1 && era4Steps.length >= 2) {
@@ -191,13 +186,11 @@
                 era4Photo1.style.opacity = (1 - fadeProgress4);
             }
 
-            // --- EXTRA FRAMEWORK: INLINE MAN SCROLLY ---
             const manSteps = document.querySelectorAll('.man-step');
             manSteps.forEach((step) => {
                 const rect = step.getBoundingClientRect();
                 if (rect.top >= -window.innerHeight / 2 && rect.top < window.innerHeight / 2) {
                     const stepNum = step.getAttribute('data-man-step');
-                    
                     manSteps.forEach(s => s.classList.remove('active'));
                     step.classList.add('active');
 

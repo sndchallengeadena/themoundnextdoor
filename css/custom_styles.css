@@ -30,7 +30,6 @@
     transition: opacity 0.8s ease-in-out; 
 }
 
-/* Ensure modern image sits above past historical context image on load */
 #photo-present { z-index: 2; opacity: 1; }
 #photo-past { z-index: 1; opacity: 1; }
 
@@ -318,7 +317,6 @@ img[src*="Pipe.png"] {
     background-color: transparent !important;
 }
 
-/* Circular invisible hitboxes mapped directly over the graphic numbers */
 .map-hotspot-pin {
     position: absolute !important;
     width: 36px !important;  
@@ -332,14 +330,12 @@ img[src*="Pipe.png"] {
     transition: background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
 }
 
-/* Interactive feedback loop style system on hover */
 .map-hotspot-pin:hover {
     background-color: rgba(124, 133, 62, 0.35) !important; 
     border: 2px solid #556229 !important;
     transform: translate(-50%, -50%) scale(1.15) !important; 
 }
 
-/* Dynamic pop-up descriptive tooltip box container panel tracking coordinates */
 .map-hover-tooltip {
     position: absolute !important;
     background-color: rgba(17, 17, 17, 0.96) !important;
@@ -363,7 +359,6 @@ img[src*="Pipe.png"] {
     visibility: visible !important;
 }
 
-/* Inside caption title element settings */
 .map-hover-tooltip strong {
     color: #d4af37 !important; 
     display: block !important;
@@ -377,33 +372,31 @@ img[src*="Pipe.png"] {
    MOBILE-ONLY RESPONSIVE OVERRIDES
    ========================================================================== */
 @media (max-width: 768px) {
-    /* Reactivate full live sticky tracking parameters for opening scrolly */
+    /* Safe opening sticky framework heights for clean scrolling on mobile */
     .scrolly-visual {
-        height: 62vh !important;
+        height: 65vh !important;
     }
     .scrolly-bg-img {
         object-fit: cover !important;
         object-position: center center !important;
     }
     .scrolly-story {
-        margin-top: -62vh !important;
+        margin-top: -65vh !important;
     }
 
-    /* Scale map frame safely on phone views */
     .interactive-map-holder {
         max-width: 100% !important;
         margin: 2rem auto !important;
         position: relative !important;
     }
 
-    /* Hotspot pins: Centered precisely by removing blanket offset translate shifts */
+    /* Fixed: Perfectly targets pins over the circles on mobile layout screens */
     .map-hotspot-pin {
         width: 26px !important;
         height: 26px !important;
-        transform: translate(-50%, -50%) !important;
+        transform: translate(-50%, 5px) !important;
     }
 
-    /* Fixed bottom container panel sheet for app-style information tooltips */
     .map-hover-tooltip {
         position: fixed !important;
         left: 50% !important;
