@@ -30,6 +30,7 @@
     transition: opacity 0.8s ease-in-out; 
 }
 
+/* Ensure modern image sits above past historical context image on load */
 #photo-present { z-index: 2; opacity: 1; }
 #photo-past { z-index: 1; opacity: 1; }
 
@@ -376,21 +377,33 @@ img[src*="Pipe.png"] {
    MOBILE-ONLY RESPONSIVE OVERRIDES
    ========================================================================== */
 @media (max-width: 768px) {
-    /* Keep map container scaled properly */
+    /* Reactivate full live sticky tracking parameters for opening scrolly */
+    .scrolly-visual {
+        height: 62vh !important;
+    }
+    .scrolly-bg-img {
+        object-fit: cover !important;
+        object-position: center center !important;
+    }
+    .scrolly-story {
+        margin-top: -62vh !important;
+    }
+
+    /* Scale map frame safely on phone views */
     .interactive-map-holder {
         max-width: 100% !important;
         margin: 2rem auto !important;
         position: relative !important;
     }
 
-    /* Hotspot pins: Moved cleanly using vertical margins */
+    /* Hotspot pins: Centered precisely by removing blanket offset translate shifts */
     .map-hotspot-pin {
-        width: 28px !important;
-        height: 28px !important;
-        margin-top: -28px !important;
+        width: 26px !important;
+        height: 26px !important;
+        transform: translate(-50%, -50%) !important;
     }
 
-    /* Fixed sheet component configuration anchored at bottom of view */
+    /* Fixed bottom container panel sheet for app-style information tooltips */
     .map-hover-tooltip {
         position: fixed !important;
         left: 50% !important;
