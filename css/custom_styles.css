@@ -376,9 +376,70 @@ img[src*="Pipe.png"] {
    MOBILE-ONLY RESPONSIVE OVERRIDES
    ========================================================================== */
 @media (max-width: 768px) {
-    /* Hide the scrolling setup container spaces on mobile entirely */
+    /* 1. Reset container parameters so layout reads as traditional stacked content blocks */
     main > .scrolly-container {
-        display: none !important;
+        position: relative !important;
+        height: auto !important;
+        display: block !important;
+        background-color: #ffffff !important;
+    }
+
+    main > .scrolly-container .scrolly-visual {
+        position: relative !important;
+        height: auto !important;
+        overflow: visible !important;
+        background-color: #ffffff !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* 2. Format drawings as standalone full-width images */
+    main > .scrolly-container .scrolly-bg-img {
+        position: relative !important;
+        height: auto !important;
+        width: 100% !important;
+        object-fit: contain !important;
+        opacity: 1 !important;
+    }
+
+    /* Force the historic drawing to show under the modern drawing stack block */
+    main > .scrolly-container #photo-past {
+        display: block !important;
+    }
+
+    /* 3. Reconfigure the narrative blocks into clean text layout boxes between the drawings */
+    main > .scrolly-container .scrolly-story {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        margin-top: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-around !important;
+        pointer-events: none !important;
+    }
+
+    main > .scrolly-container .step {
+        height: auto !important;
+        padding: 0 !important;
+    }
+
+    /* Explicitly push content layout box panels down onto their respective drawing fields */
+    main > .scrolly-container .step[data-step="1"] {
+        margin-top: 22% !important;
+    }
+    main > .scrolly-container .step[data-step="2"] {
+        margin-top: 48% !important;
+    }
+
+    main > .scrolly-container .step-content {
+        opacity: 1 !important;
+        transform: none !important;
+        max-width: 85% !important;
+        padding: 1.25rem !important;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
     }
 
     /* Keep map container scaled properly */
