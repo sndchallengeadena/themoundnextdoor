@@ -376,12 +376,13 @@ img[src*="Pipe.png"] {
    MOBILE-ONLY RESPONSIVE OVERRIDES
    ========================================================================== */
 @media (max-width: 768px) {
-    /* Scales background container precisely to match image heights without black spaces */
+    /* Fixed: Collapses container height to match image proportions exactly */
     .scrolly-visual {
         height: auto !important;
         position: relative !important;
     }
     
+    /* Fixed: Allows image to dictate real height, removing the bottom black bar */
     .scrolly-bg-img {
         position: relative !important;
         height: auto !important;
@@ -389,7 +390,7 @@ img[src*="Pipe.png"] {
         object-fit: contain !important;
     }
     
-    /* Pulls narrative cards smoothly over the illustration stack blocks */
+    /* Pulls narrative cards cleanly over the illustration stack blocks */
     .scrolly-story {
         margin-top: 0 !important;
         padding-bottom: 2rem !important;
@@ -407,23 +408,22 @@ img[src*="Pipe.png"] {
         position: relative !important;
     }
 
-    /* Target Pins: Shifted up precisely 28px on mobile using percent offsets */
+    /* Hotspot pins: Nudged upward cleanly using vertical translate */
     .map-hotspot-pin {
         width: 28px !important;
         height: 28px !important;
-        margin-top: -28px !important;
+        transform: translate(-50%, -110%) !important;
     }
 
-    /* Card Panels: Beautiful locked sticky sheet position panel at bottom of screen */
+    /* Tooltip content box fixed cleanly right beneath map graphics */
     .map-hover-tooltip {
-        position: fixed !important;
+        position: absolute !important;
         left: 50% !important;
         top: auto !important;
-        bottom: 24px !important; 
+        bottom: -75px !important; 
         transform: translateX(-50%) !important;
-        width: 90% !important;
-        max-width: 350px !important;
+        width: 95% !important;
+        max-width: 340px !important;
         box-sizing: border-box !important;
-        z-index: 99999 !important;
     }
 }
