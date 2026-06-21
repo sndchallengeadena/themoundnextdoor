@@ -376,10 +376,10 @@ img[src*="Pipe.png"] {
    MOBILE-ONLY RESPONSIVE OVERRIDES
    ========================================================================== */
 @media (max-width: 768px) {
-    /* Prevent widescreen backgrounds from getting chopped off on thin mobile views */
+    /* Stretch backgrounds full screen while locking the focal point dead center */
     .scrolly-bg-img {
-        object-fit: contain !important;
-        background-color: #111 !important; 
+        object-fit: cover !important;
+        object-position: center center !important;
     }
 
     /* Ensure map container frames Tap target pins precisely */
