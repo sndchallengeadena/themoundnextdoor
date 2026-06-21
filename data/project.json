@@ -86,7 +86,7 @@
   },
   {
     "type": "text",
-    "content": "</p></section><section class='scrolly-container era1-scrolly'><div class='scrolly-visual'><img class='scrolly-bg-img' src='images/ERA1.png'></div><div class='scrolly-story'><div class='era1-step' data-step='1'><div class='step-content'><p>Adena necklaces have been found made of Marginella shells sourced from the Atlantic Ocean or the Gulf of Mexico.</p></div></div><div class='era1-step' data-step='2'><div class='step-content'><p>The Adena had trade networks stretching hundreds of miles.</p></div></div></div></section><p class='body'>",
+    "content": "</p></section><section class='make-scrolly-container era1-scrolly'><div class='scrolly-visual'><img class='scrolly-bg-img' src='images/ERA1.png'></div><div class='scrolly-story'><div class='era1-step' data-step='1'><div class='step-content'><p>Adena necklaces have been found made of Marginella shells sourced from the Atlantic Ocean or the Gulf of Mexico.</p></div></div><div class='era1-step' data-step='2'><div class='step-content'><p>The Adena had trade networks stretching hundreds of miles.</p></div></div></div></section><p class='body'>",
     "max_size": "body",
     "credit": ""
   },
@@ -98,7 +98,7 @@
   },
   {
     "type": "text",
-    "content": "</p></section><section class='inline-man-scrolly'><div class='man-visual-frame'><img id='photo-man-1' class='man-scroll-img active' src='images/Man.png' alt='Adena clothing reconstruction'><img id='photo-man-2' class='man-scroll-img' src='images/man2.png' alt='Adena tools and physical regalia'><img id='photo-man-3' class='man-scroll-img' src='images/man3.png' alt='Adena ancestral legacy'></div><div class='man-story-steps'><div class='man-step' data-man-step='1'><div class='step-content'><p>Archaeological records indicate that leadership and spiritual roles within Adena society were deeply tied to lineage and visual representation.</p></div></div><div class='man-step' data-man-step='2'><div class='step-content'><p>Physical regalia, including hairstyles and physical adornments, designated status during pan-regional communal assemblies.</p></div></div><div class='man-step' data-man-step='3'><div class='step-content'><p>Through generations, these distinctive practices preserved historical lineage across the Ohio River Valley basin.</p></div></div></div></section><p class='body'>",
+    "content": "</p></section><section class='inline-man-scrolly'><div class='man-visual-frame'><img id='photo-man-1' class='man-scroll-img active' src='images/Man.png' alt='Adena clothing reconstruction'><img id='photo-man-2' class='man-scroll-img' src='images/Man2.png' alt='Adena tools and physical regalia'><img id='photo-man-3' class='man-scroll-img' src='images/Man3.png' alt='Adena ancestral legacy'></div><div class='man-story-steps'><div class='man-step' data-man-step='1'><div class='step-content'><p>Archaeological records indicate that leadership and spiritual roles within Adena society were deeply tied to lineage and visual representation.</p></div></div><div class='man-step' data-man-step='2'><div class='step-content'><p>Physical regalia, including hairstyles and physical adornments, designated status during pan-regional communal assemblies.</p></div></div><div class='man-step' data-man-step='3'><div class='step-content'><p>Through generations, these distinctive practices preserved historical lineage across the Ohio River Valley basin.</p></div></div></div></section><p class='body'>",
     "max_size": "body",
     "credit": ""
   },
