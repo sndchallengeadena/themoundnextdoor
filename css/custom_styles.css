@@ -1,0 +1,373 @@
+/* ==========================================================================
+   SCROLLYTELLING FRAMEWORK STYLES
+   ========================================================================== */
+
+.scrolly-container {
+    position: relative;
+    width: 100%;
+    background-color: #111;
+}
+
+.scrolly-visual {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000;
+    z-index: 1;
+}
+
+.scrolly-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.8s ease-in-out; 
+}
+
+#photo-present { z-index: 2; opacity: 1; }
+#photo-past { z-index: 1; opacity: 1; }
+
+#scrolly-graphic-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.6s ease;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.scrolly-story {
+    position: relative;
+    width: 100%;
+    margin-top: -100vh;
+    z-index: 4;
+    pointer-events: none; 
+}
+
+.step {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.step-content {
+    background: #ffffff !important;
+    color: #000000;
+    padding: 2.5rem;
+    border-radius: 0px;
+    max-width: 550px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+    pointer-events: auto;
+    opacity: 0.70;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.step-content h2, .step-content p {
+    color: #000000 !important;
+    margin-top: 0;
+}
+
+.step-content h2 { font-size: 2rem; }
+
+.step.active .step-content {
+    opacity: 1 !important;
+    transform: translateY(0);
+}
+
+#main-container { padding-top: 3rem; }
+
+/* ==========================================================================
+   SECONDARY ERA 1 SCROLLY BLOCK HANDLERS (FULL BLEED VIEWPORT BREAKOUT)
+   ========================================================================== */
+.era1-scrolly {
+    width: 100vw !important;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+}
+
+.era1-scrolly .scrolly-bg-img {
+    object-fit: cover !important; 
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.era1-step {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.era1-step.active .step-content {
+    opacity: 1 !important;
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   INLINE IN-CONTAINER MAN SCROLLY (WITH TARGETED MAN3 SCALING)
+   ========================================================================== */
+.inline-man-scrolly {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.man-visual-frame {
+    position: sticky;
+    top: 15vh; 
+    width: 200px;
+    height: 440px; 
+    margin-bottom: 2rem;
+    z-index: 5;
+}
+
+.man-scroll-img {
+    position: absolute;
+    bottom: 0; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 380px;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out, width 0.4s ease, height 0.4s ease;
+}
+
+#photo-man-3 {
+    width: 280px !important;  
+    height: 440px !important; 
+}
+
+.man-scroll-img.active {
+    opacity: 1;
+}
+
+.man-story-steps {
+    position: relative;
+    width: 100%;
+    margin-top: -440px; 
+    z-index: 6;
+    pointer-events: none;
+}
+
+.man-step {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.man-step .step-content {
+    pointer-events: auto;
+    opacity: 0.25;
+    transform: scale(0.95);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.man-step.active .step-content {
+    opacity: 1 !important;
+    transform: scale(1);
+}
+
+/* ==========================================================================
+   SECONDARY ERA 2 SCROLLY BLOCK HANDLERS
+   ========================================================================== */
+.era2-scrolly {
+    width: 100vw !important;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+}
+
+.era2-scrolly .scrolly-bg-img {
+    object-fit: cover !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.era2-step {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.era2-step.active .step-content {
+    opacity: 1 !important;
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   SECONDARY ERA 3 SCROLLY BLOCK HANDLERS
+   ========================================================================== */
+.era3-scrolly {
+    width: 100vw !important;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+}
+
+.era3-scrolly .scrolly-bg-img {
+    object-fit: cover !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.era3-step {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.era3-step.active .step-content {
+    opacity: 1 !important;
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   SECONDARY ERA 4 SCROLLY BLOCK HANDLERS
+   ========================================================================== */
+.era4-scrolly {
+    width: 100vw !important;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+}
+
+.era4-scrolly .scrolly-bg-img {
+    object-fit: cover !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.era4-step {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.era4-step.active .step-content {
+    opacity: 1 !important;
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   CUSTOM INLINE IMAGE OVERRIDES
+   ========================================================================== */
+img[src*="Pipe.png"] {
+    max-width: 200px !important;
+    height: auto !important;
+    margin: 2rem auto !important;
+    display: block !important;
+}
+
+/* ==========================================================================
+   DYNAMIC INTERACTIVE IMAGE MAP HOVER LAYER STYLES
+   ========================================================================== */
+.interactive-map-holder {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 650px !important;
+    margin: 3.5rem auto !important;
+    background-color: transparent !important;
+}
+
+/* Circular invisible hitboxes mapped directly over the graphic numbers */
+.map-hotspot-pin {
+    position: absolute !important;
+    width: 36px !important;  
+    height: 36px !important;
+    border-radius: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    background-color: rgba(212, 175, 55, 0.01) !important; 
+    border: 1px solid rgba(212, 175, 55, 0.15) !important;
+    cursor: pointer !important;
+    z-index: 99 !important;
+    transition: background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+/* Interactive feedback loop style system on hover */
+.map-hotspot-pin:hover {
+    background-color: rgba(124, 133, 62, 0.35) !important; 
+    border: 2px solid #556229 !important;
+    transform: translate(-50%, -50%) scale(1.15) !important; 
+}
+
+/* Dynamic pop-up descriptive tooltip box container panel tracking coordinates */
+.map-hover-tooltip {
+    position: absolute !important;
+    background-color: rgba(17, 17, 17, 0.96) !important;
+    color: #ffffff !important;
+    padding: 0.85rem 1.15rem !important;
+    font-size: 0.85rem !important;
+    line-height: 1.45 !important;
+    border-radius: 2px !important;
+    pointer-events: none !important; 
+    opacity: 0 !important;
+    visibility: hidden !important;
+    z-index: 1000 !important;
+    width: 220px !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    transition: opacity 0.12s ease, visibility 0.12s ease;
+}
+
+.map-hover-tooltip.visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Inside caption title element settings */
+.map-hover-tooltip strong {
+    color: #d4af37 !important; 
+    display: block !important;
+    margin-bottom: 0.3rem !important;
+    font-size: 0.95rem !important;
+    font-weight: bold !important;
+    letter-spacing: 0.01em !important;
+}

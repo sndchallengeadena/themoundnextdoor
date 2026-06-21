@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/base_styles.css">
+    <link rel="stylesheet" href="css/base_fonts.css">
+    <link rel="stylesheet" href="css/custom_styles.css">
+
+    <title>SND Challenge</title>
+    <meta name="description" content="Society for News Design Students Challenge." />
+    <meta http-equiv="Content-Language" content="en" />
+    <link rel="canonical" href="https://sndchallenge.github.io/index.html" />
+    <meta name="image" content="https://sndchallenge.github.io/images/meta/meta_og_index.jpg" />
+
+    <meta property="og:url" content="https://sndchallenge.github.io/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SND Challenge">
+    <meta property="og:description" content="Society for News Design Students Challenge.">
+    <meta property="og:image" content="https://sndchallenge.github.io/images/meta/meta_og_index.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="sndchallenge.github.io">
+    <meta property="twitter:url" content="https://sndchallenge.github.io/index.html">
+    <meta name="twitter:title" content="SND Challenge">
+    <meta name="twitter:description" content="Society for News Design Students Challenge.">
+    <meta name="twitter:image" content="https://sndchallenge.github.io/images/meta/meta_og_index.jpg">
+    <meta name="twitter:site" content="@SND" />
+
+    <link rel="icon" type="image/png" href="/images/favicon/myfavicon-96x96" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon/myfavicon.svg" />
+    <link rel="shortcut icon" href="/images/favicon/myfavicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/myapple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+</head>
+
+<body>
+    <header>
+        <img src="images/2025.png" alt="SND Challenge 2025 Logo" class="header-logo">
+    </header>
+
+    <main>
+        <section class="scrolly-container">
+            <div class="scrolly-visual">
+                <img id="photo-past" class="scrolly-bg-img" src="images/Past.png" alt="Historical Past Landscape">
+                <img id="photo-present" class="scrolly-bg-img" src="images/Present.png" alt="Modern Present Landscape">
+                <div id="scrolly-graphic-layer"></div>
+            </div>
+
+            <div class="scrolly-story">
+                <div class="step" data-step="1">
+                    <div class="step-content">
+                        <h2>Wait... Is That a Hill?</h2>
+                    </div>
+                </div>
+                
+                <div class="step" data-step="2">
+                    <div class="step-content">
+                        <p>That's 2,800 years of history in someone's front yard.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="main-container"></div>
+    </main>
+
+    <footer>
+        <img src="images/2025.png" alt="SND Challenge 2025 Logo" class="challenge-logo">
+        <p class="footer-intro"></p>
+        <div class="footer-logo university"></div>
+        <div class="footer-logo">
+            <img src="images/icon.svg" alt="SND Logo">
+            <h2>Society for News Design</h2>
+            <ul>
+                <li><a href="https://www.instagram.com/societyfornewsdesign/">Instagram</a></li>
+                <li><a href="https://twitter.com/SND">Twitter</a></li>
+                <li><a href="https://www.facebook.com/societyfornewsdesign">Facebook</a></li>
+                <li><a href="https://snd.org/">SND.org</a></li>
+            </ul>
+        </div>
+        <p class="g-centered footer-note"></p>
+    </footer>
+
+    <script src="js/index.js"></script>
+
+    <script>
+        window.addEventListener("scroll", () => {
+            // --- FRAMEWORK 1: OPENING SCROLLY ---
+            const presentPhoto = document.getElementById('photo-present');
+            const steps = document.querySelectorAll('.step');
+            
+            if (presentPhoto && steps.length >= 2) {
+                const step1Rect = steps[0].getBoundingClientRect();
+                const step2Rect = steps[1].getBoundingClientRect();
+
+                if (step1Rect.top >= -window.innerHeight / 2 && step1Rect.top < window.innerHeight / 2) {
+                    steps[0].classList.add('active');
+                    steps[1].classList.remove('active');
+                } else if (step2Rect.top >= -window.innerHeight / 2 && step2Rect.top < window.innerHeight / 2) {
+                    steps[0].classList.remove('active');
+                    steps[1].classList.add('active');
+                }
+
+                let fadeProgress = (window.innerHeight - step2Rect.top) / window.innerHeight;
+                if (fadeProgress < 0) fadeProgress = 0;
+                if (fadeProgress > 1) fadeProgress = 1;
+
+                presentPhoto.style.opacity = (1 - fadeProgress);
+            }
+
+            // --- FRAMEWORK 2: ERA 1 SINGLE IMAGE SCROLLY ---
+            const era1Steps = document.querySelectorAll('.era1-step');
+            if (era1Steps.length >= 2) {
+                const era1Rect1 = era1Steps[0].getBoundingClientRect();
+                const era1Rect2 = era1Steps[1].getBoundingClientRect();
+
+                if (era1Rect1.top >= -window.innerHeight / 2 && era1Rect1.top < window.innerHeight / 2) {
+                    era1Steps[0].classList.add('active');
+                    era1Steps[1].classList.remove('active');
+                } else if (era1Rect2.top >= -window.innerHeight / 2 && era1Rect2.top < window.innerHeight / 2) {
+                    era1Steps[0].classList.remove('active');
+                    era1Steps[1].classList.add('active');
+                }
+            }
+
+            // --- FRAMEWORK 3: ERA 2 TWO-IMAGE SCROLLY ---
+            const era2Photo1 = document.getElementById('photo-era2-1');
+            const era2Steps = document.querySelectorAll('.era2-step');
+            if (era2Photo1 && era2Steps.length >= 2) {
+                const era2Rect1 = era2Steps[0].getBoundingClientRect();
+                const era2Rect2 = era2Steps[1].getBoundingClientRect();
+
+                if (era2Rect1.top >= -window.innerHeight / 2 && era2Rect1.top < window.innerHeight / 2) {
+                    era2Steps[0].classList.add('active');
+                    era2Steps[1].classList.remove('active');
+                } else if (era2Rect2.top >= -window.innerHeight / 2 && era2Rect2.top < window.innerHeight / 2) {
+                    era2Steps[0].classList.remove('active');
+                    era2Steps[1].classList.add('active');
+                }
+
+                let fadeProgress2 = (window.innerHeight - era2Rect2.top) / window.innerHeight;
+                if (fadeProgress2 < 0) fadeProgress2 = 0;
+                if (fadeProgress2 > 1) fadeProgress2 = 1;
+
+                era2Photo1.style.opacity = (1 - fadeProgress2);
+            }
+
+            // --- FRAMEWORK 4: ERA 3 TWO-IMAGE SCROLLY ---
+            const era3Photo1 = document.getElementById('photo-era3-1');
+            const era3Steps = document.querySelectorAll('.era3-step');
+            if (era3Photo1 && era3Steps.length >= 2) {
+                const era3Rect1 = era3Steps[0].getBoundingClientRect();
+                const era3Rect2 = era3Steps[1].getBoundingClientRect();
+
+                if (era3Rect1.top >= -window.innerHeight / 2 && era3Rect1.top < window.innerHeight / 2) {
+                    era3Steps[0].classList.add('active');
+                    era3Steps[1].classList.remove('active');
+                } else if (era3Rect2.top >= -window.innerHeight / 2 && era3Rect2.top < window.innerHeight / 2) {
+                    era3Steps[0].classList.remove('active');
+                    era3Steps[1].classList.add('active');
+                }
+
+                let fadeProgress3 = (window.innerHeight - era3Rect2.top) / window.innerHeight;
+                if (fadeProgress3 < 0) fadeProgress3 = 0;
+                if (fadeProgress3 > 1) fadeProgress3 = 1;
+
+                era3Photo1.style.opacity = (1 - fadeProgress3);
+            }
+
+            // --- FRAMEWORK 6: ERA 4 TWO-IMAGE SCROLLY ---
+            const era4Photo1 = document.getElementById('photo-era4-1');
+            const era4Steps = document.querySelectorAll('.era4-step');
+            if (era4Photo1 && era4Steps.length >= 2) {
+                const era4Rect1 = era4Steps[0].getBoundingClientRect();
+                const era4Rect2 = era4Steps[1].getBoundingClientRect();
+
+                if (era4Rect1.top >= -window.innerHeight / 2 && era4Rect1.top < window.innerHeight / 2) {
+                    era4Steps[0].classList.add('active');
+                    era4Steps[1].classList.remove('active');
+                } else if (era4Rect2.top >= -window.innerHeight / 2 && era4Rect2.top < window.innerHeight / 2) {
+                    era4Steps[0].classList.remove('active');
+                    era4Steps[1].classList.add('active');
+                }
+
+                let fadeProgress4 = (window.innerHeight - era4Rect2.top) / window.innerHeight;
+                if (fadeProgress4 < 0) fadeProgress4 = 0;
+                if (fadeProgress4 > 1) fadeProgress4 = 1;
+
+                era4Photo1.style.opacity = (1 - fadeProgress4);
+            }
+
+            // --- EXTRA FRAMEWORK: INLINE MAN SCROLLY ---
+            const manSteps = document.querySelectorAll('.man-step');
+            manSteps.forEach((step) => {
+                const rect = step.getBoundingClientRect();
+                if (rect.top >= -window.innerHeight / 2 && rect.top < window.innerHeight / 2) {
+                    const stepNum = step.getAttribute('data-man-step');
+                    
+                    manSteps.forEach(s => s.classList.remove('active'));
+                    step.classList.add('active');
+
+                    const allManImgs = document.querySelectorAll('.man-scroll-img');
+                    allManImgs.forEach(img => img.classList.remove('active'));
+                    
+                    const targetImg = document.getElementById(`photo-man-${stepNum}`);
+                    if (targetImg) targetImg.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
