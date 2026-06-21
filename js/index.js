@@ -100,19 +100,19 @@ function addcontent() {
 
                             // PERFECTLY ALIGNED TARGET COORDINATES BASED ON VIDEO COMPRESSION SCALE
                             const mapMoundsData = [
-                                {"top": "50.5%", "left": "39.7%", "title": "Hartman Mound", "info": "Largest and best preserved in The Plains."},
-                                {"top": "49%", "left": "24%", "title": "Woodruff/Connett Mounds", "info": "Second-largest standing mound in The Plains."},
-                                {"top": "51.5%", "left": "24.3%", "title": "Connett Mounds 3 & 4", "info": "Series of small excavated mounds."},
-                                {"top": "72.6%", "left": "41.7%", "title": "Beard/Baird/Coon Mound", "info": "Destroyed in 1930 and had significant artifacts like mica, copper, and marine shells."},
-                                {"top": "78%", "left": "43%", "title": "Armitage Mound", "info": "Once large, later cleared for new construction."},
-                                {"top": "74.3%", "left": "47.3%", "title": "Martin Mound #2", "info": "Now built over, the base is still visible, and excavation uncovered a child's grave."},
-                                {"top": "74.3%", "left": "52.1%", "title": "Martin’s “Schoolhouse” Mound", "info": "A school was built on the mound in 1875, now sits on a private residence."},
-                                {"top": "76.8%", "left": "76.7%", "title": "Dorr Mound #2", "info": "Purchased by the Archaeological Conservancy in 2008 for protection."},
-                                {"top": "82.2%", "left": "76.2%", "title": "Dorr Mound #1", "info": "Next to Dorr Mound #2."},
-                                {"top": "80.8%", "left": "61.15%", "title": "Zenner Meadows Mound", "info": "Sits on a high terrace above the Hocking River."},
-                                {"top": "79.2%", "left": "61%", "title": "School Fort Ring/Sacred Circle", "info": "Destroyed during local high school construction."},
-                                {"top": "89.4%", "left": "68.3%", "title": "3 Sacred Circles & 2 Mounds", "info": "Earthen monumental cluster tracking regional ancient alignments."},
-                                {"top": "88.5%", "left": "79.3%", "title": "Large Sacred Circle", "info": "There is limited confirmed knowledge about the sacred circles. These circles typically feature an interior ditch that followed the curve of the surrounding earthen wall, along with a single causewayed entrance."}
+                                {"top": "50.5%", "left": "39.7%", "mobileTop": "22.6%", "mobileLeft": "32.9%", "title": "Hartman Mound", "info": "Largest and best preserved in The Plains."},
+                                {"top": "49%", "left": "24%", "mobileTop": "22.9%", "mobileLeft": "46.3%", "title": "Woodruff/Connett Mounds", "info": "Second-largest standing mound in The Plains."},
+                                {"top": "51.5%", "left": "24.3%", "mobileTop": "26.9%", "mobileLeft": "33.0%", "title": "Connett Mounds 3 & 4", "info": "Series of small excavated mounds."},
+                                {"top": "72.6%", "left": "41.7%", "mobileTop": "61.4%", "mobileLeft": "47.9%", "title": "Beard/Baird/Coon Mound", "info": "Destroyed in 1930 and had significant artifacts like mica, copper, and marine shells."},
+                                {"top": "78%", "left": "43%", "mobileTop": "70.4%", "mobileLeft": "49.1%", "title": "Armitage Mound", "info": "Once large, later cleared for new construction."},
+                                {"top": "74.3%", "left": "47.3%", "mobileTop": "63.9%", "mobileLeft": "52.9%", "title": "Martin Mound #2", "info": "Now built over, the base is still visible, and excavation uncovered a child's grave."},
+                                {"top": "74.3%", "left": "52.1%", "mobileTop": "63.9%", "mobileLeft": "57.0%", "title": "Martin’s “Schoolhouse” Mound", "info": "A school was built on the mound in 1875, now sits on a private residence."},
+                                {"top": "76.8%", "left": "76.7%", "mobileTop": "68.0%", "mobileLeft": "78.1%", "title": "Dorr Mound #2", "info": "Purchased by the Archaeological Conservancy in 2008 for protection."},
+                                {"top": "82.2%", "left": "76.2%", "mobileTop": "76.5%", "mobileLeft": "77.9%", "title": "Dorr Mound #1", "info": "Next to Dorr Mound #2."},
+                                {"top": "80.8%", "left": "61.15%", "mobileTop": "72.7%", "mobileLeft": "64.5%", "title": "Zenner Meadows Mound", "info": "Sits on a high terrace above the Hocking River."},
+                                {"top": "79.2%", "left": "61%", "mobileTop": "74.9%", "mobileLeft": "64.5%", "title": "School Fort Ring/Sacred Circle", "info": "Destroyed during local high school construction."},
+                                {"top": "89.4%", "left": "68.3%", "mobileTop": "87.3%", "mobileLeft": "70.8%", "title": "3 Sacred Circles & 2 Mounds", "info": "Earthen monumental cluster tracking regional ancient alignments."},
+                                {"top": "88.5%", "left": "79.3%", "mobileTop": "87.2%", "mobileLeft": "80.3%", "title": "Large Sacred Circle", "info": "There is limited confirmed knowledge about the sacred circles. These circles typically feature an interior ditch that followed the curve of the surrounding earthen wall, along with a single causewayed entrance."}
                             ];
 
                             // Generate the hotspots and attach interactions
@@ -121,6 +121,8 @@ function addcontent() {
                                 pin.className = 'map-hotspot-pin';
                                 pin.style.top = mound.top;
                                 pin.style.left = mound.left;
+                                pin.style.setProperty('--mobile-top', mound.mobileTop);
+                                pin.style.setProperty('--mobile-left', mound.mobileLeft);
 
                                 // Helper function to display data cleanly
                                 const showTooltip = () => {
