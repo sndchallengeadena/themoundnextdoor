@@ -419,11 +419,20 @@ img[src*="Pipe.png"] {
         text-align: center !important;      
     }
 
-    /* Safe interactive asset tracking parameters */
+    /* Fixed Map Coordinate Locking Systems for Portables */
     .interactive-map-holder {
         max-width: 100% !important;
+        width: 100% !important;
         margin: 2rem auto !important;
         position: relative !important;
+        display: block !important;
+        aspect-ratio: 650 / 450 !important; /* Locks parent bounding container precisely to graphic proportions */
+    }
+
+    .interactive-map-holder img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
         display: block !important;
     }
 
