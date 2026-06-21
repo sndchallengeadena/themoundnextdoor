@@ -419,38 +419,32 @@ img[src*="Pipe.png"] {
         text-align: center !important;      
     }
 
-    /* Mobile-only map crop: keeps desktop untouched while enlarging the local map. */
+    /* BULLETPROOF MOBILE MAP COORD ANCHORING ENGINE */
     .interactive-map-holder {
-        width: calc(100vw - 32px) !important;
-        max-width: 760px !important;
-        margin: 2rem 50% !important;
-        transform: translateX(-50%) !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 2rem auto !important;
         position: relative !important;
         display: block !important;
-        aspect-ratio: 1520 / 1548 !important;
-        height: auto !important;
-        padding-bottom: 0 !important;
-        overflow: hidden !important;
-        background-color: #eeeeee !important;
+        height: 0 !important;
+        padding-bottom: 137% !important; /* Perfect fluid vertical proportion constraint for Map.png stacking values */
+        background-color: transparent !important;
     }
 
     .interactive-map-holder img {
         position: absolute !important;
-        top: -61% !important;
-        left: -32% !important;
-        width: 164% !important;
-        height: auto !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
         object-fit: contain !important;
-        max-width: none !important;
     }
 
     .map-hotspot-pin {
-        top: var(--mobile-top) !important;
-        left: var(--mobile-left) !important;
-        width: clamp(30px, 7vw, 44px) !important;
-        height: clamp(30px, 7vw, 44px) !important;
+        width: 28px !important;
+        height: 28px !important;
         transform: translate(-50%, -50%) !important;
-        margin-top: 0 !important;
+        margin-top: -45px !important;
     }
 
     .map-hover-tooltip {
