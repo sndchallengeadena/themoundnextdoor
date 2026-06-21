@@ -376,42 +376,54 @@ img[src*="Pipe.png"] {
    MOBILE-ONLY RESPONSIVE OVERRIDES
    ========================================================================== */
 @media (max-width: 768px) {
-    /* Scales background to fill viewport smoothly with moderate zoom, killing black bars */
+    /* Scales background container precisely to match image heights without black spaces */
     .scrolly-visual {
-        height: 60vh !important;
+        height: auto !important;
+        position: relative !important;
     }
+    
     .scrolly-bg-img {
-        height: 100% !important;
-        object-fit: cover !important;
-        object-position: center center !important;
+        position: relative !important;
+        height: auto !important;
+        width: 100% !important;
+        object-fit: contain !important;
     }
+    
+    /* Pulls narrative cards smoothly over the illustration stack blocks */
     .scrolly-story {
-        margin-top: -60vh !important;
+        margin-top: 0 !important;
+        padding-bottom: 2rem !important;
+    }
+    
+    .step {
+        height: auto !important;
+        padding: 1.5rem 1rem !important;
     }
 
-    /* Keep map container scaled properly */
+    /* Keep interactive maps scaling boundaries active */
     .interactive-map-holder {
         max-width: 100% !important;
         margin: 2rem auto !important;
         position: relative !important;
     }
 
-    /* Hotspot pins: Nudged upward cleanly using vertical translate */
+    /* Target Pins: Shifted up precisely 28px on mobile using percent offsets */
     .map-hotspot-pin {
         width: 28px !important;
         height: 28px !important;
-        transform: translate(-50%, -110%) !important;
+        margin-top: -28px !important;
     }
 
-    /* Tooltip content box fixed cleanly right beneath map graphics */
+    /* Card Panels: Beautiful locked sticky sheet position panel at bottom of screen */
     .map-hover-tooltip {
-        position: absolute !important;
+        position: fixed !important;
         left: 50% !important;
         top: auto !important;
-        bottom: -75px !important; 
+        bottom: 24px !important; 
         transform: translateX(-50%) !important;
-        width: 95% !important;
-        max-width: 340px !important;
+        width: 90% !important;
+        max-width: 350px !important;
         box-sizing: border-box !important;
+        z-index: 99999 !important;
     }
 }
