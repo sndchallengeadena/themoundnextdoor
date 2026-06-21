@@ -443,10 +443,10 @@ img[src*="Pipe.png"] {
     }
 
     .map-hotspot-pin {
-        width: 28px !important;
-        height: 28px !important;
-        transform: translate(-50%, -50%) !important;
-        margin-top: -45px !important;
+    width: 28px !important;
+    height: 28px !important;
+    transform: translate(-50%, -50%) !important;
+    margin-top: -5px !important;
     }
 
     .map-hover-tooltip {
