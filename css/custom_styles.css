@@ -4,7 +4,12 @@
 
 .scrolly-container {
     position: relative;
-    width: 100%;
+    /* Forces the opening sequence to break out of parent wrappers and span edge-to-edge */
+    width: 100vw !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
     background-color: #111;
 }
 
