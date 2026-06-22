@@ -317,6 +317,16 @@ img[src*="Pipe.png"] {
     background-color: transparent !important;
 }
 
+.desktop-interactive-map {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+}
+
+.mobile-static-map-wrapper {
+    display: none !important; /* Hide static layout on desktop completely */
+}
+
 .map-hotspot-pin {
     position: absolute !important;
     width: 36px !important;  
@@ -431,63 +441,22 @@ img[src*="Pipe.png"] {
         background-color: transparent !important;
     }
 
-    .interactive-map-holder img {
-        position: relative !important;
-        top: auto !important;
-        left: auto !important;
+    /* Toggle visibility to secure static fallback map on phones */
+    .desktop-interactive-map {
+        display: none !important;
+    }
+
+    .mobile-static-map-wrapper {
+        display: block !important;
         width: 100% !important;
         height: auto !important;
-        object-fit: contain !important;
+    }
+
+    .mobile-static-map-wrapper img {
+        width: 100% !important;
+        height: auto !important;
         display: block !important;
     }
-
-/* Baseline configuration for all pins that are already perfect */
-    .map-hotspot-pin {
-        width: 28px !important;
-        height: 28px !important;
-        transform: translate(-50%, -50%) !important;
-    }
-
-    /* Precision mobile overrides: Shifts ALL pins cleanly to map landmarks */
-
-    /* Pin 1: Hartman Mound */
-    .map-hotspot-pin:nth-of-type(1) { margin-top: -7.5px !important; }
-
-    /* Pin 2: Woodruff/Connett Mounds (Moved UP by 0.5px) */
-    .map-hotspot-pin:nth-of-type(2) { margin-top: -9px !important; }
-
-    /* Pin 3: Connett Mounds 3 & 4 */
-    .map-hotspot-pin:nth-of-type(3) { margin-top: -4px !important; }
-    
-    /* Pin 4: Beard/Baird/Coon Mound */
-    .map-hotspot-pin:nth-of-type(4) { margin-top: -14.5px !important; }
-
-    /* Pin 5: Armitage Mound */
-    .map-hotspot-pin:nth-of-type(5) { margin-top: -18px !important; }
-
-    /* Pin 6: Martin Mound #2 */
-    .map-hotspot-pin:nth-of-type(6) { margin-top: -17px !important; }
-
-    /* Pin 7: Martin’s “Schoolhouse” Mound (Moved UP by 0.5px) */
-    .map-hotspot-pin:nth-of-type(7) { margin-top: -19px !important; }
-
-    /* Pin 8: Dorr Mound #2 */
-    .map-hotspot-pin:nth-of-type(8) { margin-top: -13.5px !important; }
-
-    /* Pin 9: Dorr Mound #1 (PERFECT - Left alone) */
-    .map-hotspot-pin:nth-of-type(9) { margin-top: -26px !important; }
-
-    /* Pin 10: Zenner Meadows Mound (Moved UP by 1px) */
-    .map-hotspot-pin:nth-of-type(10) { margin-top: -24px !important; }
-
-    /* Pin 11: School Fort Ring/Sacred Ring (Moved UP by 1.5px) */
-    .map-hotspot-pin:nth-of-type(11) { margin-top: -24px !important; }
-
-    /* Pin 12: 3 Sacred Circles & 2 Mounds (Moved UP by 2px from 15.5px) */
-    .map-hotspot-pin:nth-of-type(12) { margin-top: 13.5px !important; }
-
-    /* Pin 13: Large Sacred Circle (Moved UP by 1.5px from 13.5px) */
-    .map-hotspot-pin:nth-of-type(13) { margin-top: 12px !important; }
 
     .map-hover-tooltip {
         position: fixed !important;
