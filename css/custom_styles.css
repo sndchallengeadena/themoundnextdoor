@@ -329,14 +329,15 @@ img[src*="Pipe.png"] {
 }
 
 /* Desktop Visibility States */
-.interactive-map-holder img {
+.interactive-map-holder img.desktop-map-img {
     width: 100% !important;
     height: auto !important;
     display: block !important;
 }
 
-.mobile-map-img {
-    display: none !important; /* Absolute hard hide on desktop viewports */
+/* CRITICAL FIX: Explicitly targets and deletes the mobile path element from desktop viewports */
+.interactive-map-holder img.mobile-map-img {
+    display: none !important; 
 }
 
 .map-hotspot-pin {
@@ -457,13 +458,13 @@ img[src*="Pipe.png"] {
         background-color: transparent !important;
     }
 
-    /* Surgical mobile configuration switches */
-    .interactive-map-holder > img, .map-hotspot-pin {
-        display: none !important; /* Total removal of desktop file and pins */
+    /* CRITICAL FIX: Smoothly targeted display toggles via explicit class hooks */
+    .interactive-map-holder img.desktop-map-img, .map-hotspot-pin {
+        display: none !important; /* Wipes original Desktop.png map canvas and all layout hover hotspot nodes completely */
     }
 
-    .mobile-map-img {
-        display: block !important; /* Smooth tracking activation for mobile file path */
+    .interactive-map-holder img.mobile-map-img {
+        display: block !important; /* Renders exclusively Mobile.png fluid vector image canvas framework */
         width: 100% !important;
         height: auto !important;
     }
