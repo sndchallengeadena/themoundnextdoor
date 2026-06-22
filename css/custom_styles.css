@@ -451,10 +451,10 @@ img[src*="Pipe.png"] {
     /* Precision mobile overrides: Shifts ALL pins cleanly to map landmarks */
 
     /* Pin 1: Hartman Mound */
-    .map-hotspot-pin:nth-of-type(1) { margin-top: -7px !important; }
+    .map-hotspot-pin:nth-of-type(1) { margin-top: -7.5px !important; }
 
     /* Pin 2: Woodruff/Connett Mounds */
-    .map-hotspot-pin:nth-of-type(2) { margin-top: -8px !important; }
+    .map-hotspot-pin:nth-of-type(2) { margin-top: -8.5px !important; }
 
     /* Pin 3: Connett Mounds 3 & 4 */
     .map-hotspot-pin:nth-of-type(3) { margin-top: -4px !important; }
@@ -469,25 +469,25 @@ img[src*="Pipe.png"] {
     .map-hotspot-pin:nth-of-type(6) { margin-top: -17px !important; }
 
     /* Pin 7: Martin’s “Schoolhouse” Mound */
-    .map-hotspot-pin:nth-of-type(7) { margin-top: -18px !important; }
+    .map-hotspot-pin:nth-of-type(7) { margin-top: -18.5px !important; }
 
-    /* Pin 8: Dorr Mound #2 (NUDGED SIGNIFICANTLY DOWN FROM -23.5px) */
-    .map-hotspot-pin:nth-of-type(8) { margin-top: -14px !important; }
+    /* Pin 8: Dorr Mound #2 */
+    .map-hotspot-pin:nth-of-type(8) { margin-top: -13.5px !important; }
 
     /* Pin 9: Dorr Mound #1 */
     .map-hotspot-pin:nth-of-type(9) { margin-top: -26px !important; }
 
     /* Pin 10: Zenner Meadows Mound */
-    .map-hotspot-pin:nth-of-type(10) { margin-top: -22px !important; }
+    .map-hotspot-pin:nth-of-type(10) { margin-top: -23px !important; }
 
     /* Pin 11: School Fort Ring/Sacred Ring */
-    .map-hotspot-pin:nth-of-type(11) { margin-top: -21px !important; }
+    .map-hotspot-pin:nth-of-type(11) { margin-top: -22.5px !important; }
 
     /* Pin 12: 3 Sacred Circles & 2 Mounds */
     .map-hotspot-pin:nth-of-type(12) { margin-top: 15.5px !important; }
 
     /* Pin 13: Large Sacred Circle */
-    .map-hotspot-pin:nth-of-type(13) { margin-top: 15px !important; }
+    .map-hotspot-pin:nth-of-type(13) { margin-top: 13.5px !important; }
 
     .map-hover-tooltip {
         position: fixed !important;
