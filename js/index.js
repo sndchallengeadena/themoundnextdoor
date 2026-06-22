@@ -84,13 +84,12 @@ function addcontent() {
                         if (item.content === 'Map.png') {
                             wrapper.classList.add('interactive-map-holder');
                             
-                            // --- ORIGINAL DESKTOP MAP IMAGE ---
+                            // --- ORIGINAL DESKTOP MAP IMAGE (Completely back to original format) ---
                             el = document.createElement('img');
                             el.src = `images/${item.content}`;
                             el.alt = item.alt || 'Interactive Adena Mound Map Layout';
                             el.style.width = '100%';
                             el.style.display = 'block';
-                            el.className = 'desktop-map-img';
                             wrapper.appendChild(el);
 
                             const tooltip = document.createElement('div');
@@ -152,7 +151,7 @@ function addcontent() {
                                 tooltip.classList.remove('visible');
                             });
 
-                            // --- MOBILE STATIC REPLACEMENT ---
+                            // --- MOBILE FALLBACK ---
                             const mobileContainer = document.createElement('div');
                             mobileContainer.className = 'mobile-static-map-wrapper';
 
