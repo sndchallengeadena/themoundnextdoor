@@ -474,8 +474,8 @@ img[src*="Pipe.png"] {
     .map-hotspot-pin:nth-of-type(11) { margin-top: -21px !important; }
     /* Pin 12: 3 Sacred Circles & 2 Mounds (PERFECT - Left alone) */
     .map-hotspot-pin:nth-of-type(12) { margin-top: -28px !important; }
-    /* Pin 13: Large Sacred Circle (Matched to Pin 12 level, then moved UP 0.5) */
-    .map-hotspot-pin:nth-of-type(13) { margin-top: -28.5px !important; }
+    /* Pin 13: Large Sacred Circle */
+    .map-hotspot-pin:nth-of-type(13) { margin-top: -29.5px !important; }
 
     .map-hover-tooltip {
         position: fixed !important;
