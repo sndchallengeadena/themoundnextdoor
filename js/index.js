@@ -81,16 +81,17 @@ function addcontent() {
                         wrapper.classList.add('g-media');
                         wrapper.classList.add('g-photo-wrapper');
 
+                        // SURGICAL FIX: Matches your updated project.json "Desktop.png" asset tag
                         if (item.content === 'Desktop.png') {
                             wrapper.classList.add('interactive-map-holder');
                             
-                            // --- DESKTOP IMAGE ---
+                            // --- DESKTOP CANVAS CONFIGURATION ---
                             el = document.createElement('img');
                             el.src = `images/${item.content}`;
                             el.alt = item.alt || 'Interactive Adena Mound Map Layout';
                             el.style.width = '100%';
                             el.style.display = 'block';
-                            el.className = 'desktop-map-img'; // Explicit tracking class
+                            el.className = 'desktop-map-img';
                             wrapper.appendChild(el);
 
                             const tooltip = document.createElement('div');
@@ -152,11 +153,11 @@ function addcontent() {
                                 tooltip.classList.remove('visible');
                             });
 
-                            // --- MOBILE IMAGE ---
+                            // --- MOBILE CANVAS CONFIGURATION ---
                             const mobileImg = document.createElement('img');
-                            mobileImg.src = 'images/Mobile.png';
+                            mobileImg.src = 'images/Mobile.png'; // Matches your newly renamed asset
                             mobileImg.alt = 'Static Map of Ancient Adena Mounds in The Plains';
-                            mobileImg.className = 'mobile-map-img'; // Explicit tracking class
+                            mobileImg.className = 'mobile-map-img';
                             wrapper.appendChild(mobileImg);
 
                         } else {
