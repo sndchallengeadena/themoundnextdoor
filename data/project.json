@@ -86,7 +86,7 @@
   },
   {
     "type": "text",
-    "content": "</p></section><section class='make-scrolly-container era1-scrolly'><div class='scrolly-visual'><img class='scrolly-bg-img' src='images/ERA1.png'></div><div class='scrolly-story'><div class='era1-step' data-step='1'><div class='step-content'><p>Adena necklaces have been found made of Marginella shells sourced from the Atlantic Ocean or the Gulf of Mexico.</p></div></div><div class='era1-step' data-step='2'><div class='step-content'><p>The Adena had trade networks stretching hundreds of miles.</p></div></div></div></section><p class='body'>",
+    "content": "Adena necklaces have been found made of Marginella shells sourced from the Atlantic Ocean or the Gulf of Mexico.<br><br>The Adena had trade networks stretching hundreds of miles.",
     "max_size": "body",
     "credit": ""
   },
@@ -98,7 +98,7 @@
   },
   {
     "type": "text",
-    "content": "</p></section><section class='inline-man-scrolly'><div class='man-visual-frame'><img id='photo-man-1' class='man-scroll-img active' src='images/Man.png' alt='Adena clothing reconstruction'><img id='photo-man-2' class='man-scroll-img' src='images/Man2.png' alt='Adena tools and physical regalia'><img id='photo-man-3' class='man-scroll-img' src='images/Man3.png' alt='Adena ancestral legacy'></div><div class='man-story-steps'><div class='man-step' data-man-step='1'><div class='step-content'><p>Archaeological records indicate that leadership and spiritual roles within Adena society were deeply tied to lineage and visual representation.</p></div></div><div class='man-step' data-man-step='2'><div class='step-content'><p>Physical regalia, including hairstyles and physical adornments, designated status during pan-regional communal assemblies.</p></div></div><div class='man-step' data-man-step='3'><div class='step-content'><p>Through generations, these distinctive practices preserved historical lineage across the Ohio River Valley basin.</p></div></div></div></section><p class='body'>",
+    "content": "Archaeological records indicate that leadership and spiritual roles within Adena society were deeply tied to lineage and visual representation.<br><br>Physical regalia, including hairstyles and physical adornments, designated status during pan-regional communal assemblies.<br><br>Through generations, these distinctive practices preserved historical lineage across the Ohio River Valley basin.",
     "max_size": "body",
     "credit": ""
   },
@@ -140,7 +140,7 @@
   },
   {
     "type": "text",
-    "content": "</p></section><section class='scrolly-container era2-scrolly'><div class='scrolly-visual'><img id='photo-era2-1' class='scrolly-bg-img' src='images/ERA2_1.png' style='z-index: 2; opacity: 1;'><img id='photo-era2-2' class='scrolly-bg-img' src='images/ERA2_2.png' style='z-index: 1; opacity: 1;'></div><div class='scrolly-story'><div class='era2-step' data-step='1'><div class='step-content'><p>The same open plains that made Wolfe Plains a perfect ceremonial gathering spot — visible, accessible, central — made it a prime target for agricultural clearing.</p></div></div><div class='era2-step' data-step='2'><div class='step-content'><p>The land worked for the Adena's purposes, and later the settlers used the same land for farming.</p></div></div></div></section><p class='body'>",
+    "content": "The same open plains that made Wolfe Plains a perfect ceremonial gathering spot — visible, accessible, central — made it a prime target for agricultural clearing.<br><br>The land worked for the Adena's purposes, and later the settlers used the same land for farming.",
     "max_size": "body",
     "credit": ""
   },
@@ -169,7 +169,7 @@
   },
   {
     "type": "text",
-    "content": "</p></section><section class='scrolly-container era3-scrolly'><div class='scrolly-visual'><img id='photo-era3-1' class='scrolly-bg-img' src='images/ERA3_1.png' style='z-index: 2; opacity: 1;'><img id='photo-era3-2' class='scrolly-bg-img' src='images/ERA3_2.png' style='z-index: 1; opacity: 1;'></div><div class='scrolly-story'><div class='era3-step' data-step='1'><div class='step-content'><p>Early twentieth century surveys painstakingly cataloged the remaining earthworks, creating permanent records of monuments that faced imminent destruction from modern expansion.</p></div></div><div class='era3-step' data-step='2'><div class='step-content'><p>These recovered physical objects provided academic circles with the first definitive proof of a highly sophisticated, regional trade ecosystem.</p></div></div></div></section><p class='body'>",
+    "content": "Early twentieth century surveys painstakingly cataloged the remaining earthworks, creating permanent records of monuments that faced imminent destruction from modern expansion.<br><br>These recovered physical objects provided academic circles with the first definitive proof of a highly sophisticated, regional trade ecosystem.",
     "max_size": "body",
     "credit": ""
   },
@@ -218,7 +218,7 @@
   },
   {
     "type": "text",
-    "content": "</p></section><section class='scrolly-container era4-scrolly'><div class='scrolly-visual'><img id='photo-era4-1' class='scrolly-bg-img' src='images/ERA4_1.png' style='z-index: 2; opacity: 1;'><img id='photo-era4-2' class='scrolly-bg-img' src='images/ERA4_2.png' style='z-index: 1; opacity: 1;'></div><div class='scrolly-story'><div class='era4-step' data-step='1'><div class='step-content'><p>Hartman Mound is 40 feet tall and fully visible in The Plains. You can go see it. Today. For free.</p></div></div><div class='era4-step' data-step='2'><div class='step-content'><p>Mid-century infrastructure expansion permanently disrupted the historic pathways that once unified these remote earthworks.</p></div></div></div></section><p class='body'>",
+    "content": "Hartman Mound is 40 feet tall and fully visible in The Plains. You can go see it. Today. For free.<br><br>Mid-century infrastructure expansion permanently disrupted the historic pathways that once unified these remote earthworks.",
     "max_size": "body",
     "credit": ""
   },
@@ -291,7 +291,7 @@
   },
   {
     "type": "video",
-    "content": "https://www.youtube.com/watch?v=JegXnhDo2oM",
+    "content": "https://youtu.be/JegXnhDo2oM",
     "max_size": "body",
     "credit": ""
   },
