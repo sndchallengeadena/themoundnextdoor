@@ -372,7 +372,7 @@ img[src*="Pipe.png"] {
    MOBILE-ONLY RESPONSIVE OVERRIDES
    ========================================================================== */
 @media (max-width: 768px) {
-    /* Full bleed edge breakout system for introduction scrolly container */
+    /* Breakout viewport logic to force opening scrolly to hit 100% full bleed edges */
     main > .scrolly-container {
         width: 100vw !important;
         position: relative !important;
@@ -396,7 +396,7 @@ img[src*="Pipe.png"] {
         margin-top: -100vh !important;
     }
 
-    /* Formats card layout boxes to sit perfectly vertical and horizontal centered */
+    /* Centers the card wrapper container grid perfectly on mobile devices */
     .step {
         height: 100vh !important;
         display: flex !important;
@@ -405,7 +405,7 @@ img[src*="Pipe.png"] {
         padding: 1.5rem !important;
     }
 
-    /* Disables grey bar line artifacts and forces centered text formatting alignments */
+    /* Centers text internal alignment and wipes away the grey border double artifact outline lines */
     .step-content {
         max-width: 88% !important;
         width: 100% !important;
@@ -419,35 +419,56 @@ img[src*="Pipe.png"] {
         text-align: center !important;      
     }
 
-    /* BULLETPROOF MOBILE MAP COORD ANCHORING ENGINE */
-   .interactive-map-holder {
-    max-width: 100% !important;
-    width: 100% !important;
-    margin: 2rem auto !important;
-    position: relative !important;
-    display: block !important;
-    height: auto !important;
-    padding-bottom: 0 !important;
-    overflow: visible !important;
-    background-color: transparent !important;
+    /* Native mobile image containers matching your working configuration */
+    .interactive-map-holder {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 2rem auto !important;
+        position: relative !important;
+        display: block !important;
+        height: auto !important;
+        overflow: visible !important;
+        background-color: transparent !important;
     }
 
     .interactive-map-holder img {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
-    display: block !important;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+        display: block !important;
     }
 
+    /* Baseline configuration for top pins that are already perfect */
     .map-hotspot-pin {
-    width: 28px !important;
-    height: 28px !important;
-    transform: translate(-50%, -50%) !important;
-    margin-top: -18px !important;
+        width: 28px !important;
+        height: 28px !important;
+        transform: translate(-50%, -50%) !important;
     }
+
+    /* Precision mobile overrides: Shifts lower pins up to cancel out stretching layout bugs */
+    /* Pin 4: Beard/Baird/Coon Mound */
+    .map-hotspot-pin:nth-of-type(4) { margin-top: -12px !important; }
+    /* Pin 5: Armitage Mound */
+    .map-hotspot-pin:nth-of-type(5) { margin-top: -15px !important; }
+    /* Pin 6: Martin Mound #2 */
+    .map-hotspot-pin:nth-of-type(6) { margin-top: -16px !important; }
+    /* Pin 7: Martin’s “Schoolhouse” Mound */
+    .map-hotspot-pin:nth-of-type(7) { margin-top: -18px !important; }
+    /* Pin 8: Dorr Mound #2 */
+    .map-hotspot-pin:nth-of-type(8) { margin-top: -24px !important; }
+    /* Pin 9: Dorr Mound #1 */
+    .map-hotspot-pin:nth-of-type(9) { margin-top: -26px !important; }
+    /* Pin 10: Zenner Meadows Mound */
+    .map-hotspot-pin:nth-of-type(10) { margin-top: -22px !important; }
+    /* Pin 11: School Fort Ring/Sacred Circle */
+    .map-hotspot-pin:nth-of-type(11) { margin-top: -22px !important; }
+    /* Pin 12: 3 Sacred Circles & 2 Mounds */
+    .map-hotspot-pin:nth-of-type(12) { margin-top: -28px !important; }
+    /* Pin 13: Large Sacred Circle */
+    .map-hotspot-pin:nth-of-type(13) { margin-top: -30px !important; }
 
     .map-hover-tooltip {
         position: fixed !important;
