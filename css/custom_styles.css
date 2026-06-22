@@ -305,6 +305,13 @@ img[src*="Pipe.png"] {
     display: block !important;
 }
 
+/* Fluid scaling for any non-interactive standard images inside main-container */
+#main-container > div > img:not([class]) {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+}
+
 /* ==========================================================================
    DYNAMIC INTERACTIVE IMAGE MAP HOVER LAYER STYLES
    ========================================================================== */

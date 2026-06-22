@@ -73,8 +73,8 @@
     "credit": ""
   },
   {
-    "type": "text",
-    "content": "<b>Before Ohio Had its Name<br>",
+    "type": "subhead",
+    "content": "Before Ohio Had its Name",
     "max_size": "body",
     "credit": ""
   },
@@ -109,14 +109,21 @@
     "credit": ""
   },
   {
+    "type": "photo",
+    "content": "Process.png",
+    "caption": "",
+    "max_size": "body",
+    "credit": ""
+  },
+  {
     "type": "subhead",
     "content": "ERA 2 — Early 1800s",
     "max_size": "body",
     "credit": ""
   },
   {
-    "type": "text",
-    "content": "<b>New Neighbors Arrive<br>",
+    "type": "subhead",
+    "content": "New Neighbors Arrive",
     "max_size": "body",
     "credit": ""
   },
@@ -151,8 +158,8 @@
     "credit": ""
   },
   {
-    "type": "text",
-    "content": "<b>William C. Mills Shows Up<br>",
+    "type": "subhead",
+    "content": "William C. Mills Shows Up",
     "max_size": "body",
     "credit": ""
   },
@@ -199,8 +206,8 @@
     "credit": ""
   },
   {
-    "type": "text",
-    "content": "<b>Before Ohio Had its Name<br>",
+    "type": "subhead",
+    "content": "Roads, Suburbs, and Mound Loss",
     "max_size": "body",
     "credit": ""
   },
@@ -266,8 +273,14 @@
     "credit": ""
   },
   {
+    "type": "subhead",
+    "content": "Highlighting History",
+    "max_size": "body",
+    "credit": ""
+  },
+  {
     "type": "text",
-    "content": "<b>Highlighting History<br><br>A Bigger Story: </b> The Adena people were not just local, their trade networks stretched across half the continent. They possessed shells from the Gulf of Mexico and copper from the Great Lakes. Overall, their presence here was substantial. <br><br> <b> Adena Legacy: </b> The Friends of the Plains Mounds in Athens County, Ohio is a non-profit dedicated to promoting the awareness and protection of the ancient Adena mounds, earthworks, and Indigenous heritage of The Plains. They need people like you to know it exists.<br><br>",
+    "content": "<b>Three Reasons to Care:<br><br>A Bigger Story: </b> The Adena people were not just local, their trade networks stretched across half the continent. They possessed shells from the Gulf of Mexico and copper from the Great Lakes. Overall, their presence here was substantial. <br><br> <b> Adena Legacy: </b> The Friends of the Plains Mounds in Athens County, Ohio is a non-profit dedicated to promoting the awareness and protection of the ancient Adena mounds, earthworks, and Indigenous heritage of The Plains. They need people like you to know it exists.<br><br>",
     "max_size": "body",
     "credit": ""
   },
