@@ -451,10 +451,10 @@ img[src*="Pipe.png"] {
     /* Precision mobile overrides: Shifts ALL pins cleanly to map landmarks */
 
     /* Pin 1: Hartman Mound */
-    .map-hotspot-pin:nth-of-type(1) { margin-top: -6.5px !important; }
+    .map-hotspot-pin:nth-of-type(1) { margin-top: -7px !important; }
 
     /* Pin 2: Woodruff/Connett Mounds */
-    .map-hotspot-pin:nth-of-type(2) { margin-top: -7.5px !important; }
+    .map-hotspot-pin:nth-of-type(2) { margin-top: -8px !important; }
 
     /* Pin 3: Connett Mounds 3 & 4 */
     .map-hotspot-pin:nth-of-type(3) { margin-top: -4px !important; }
@@ -484,14 +484,10 @@ img[src*="Pipe.png"] {
     .map-hotspot-pin:nth-of-type(11) { margin-top: -21px !important; }
 
     /* Pin 12: 3 Sacred Circles & 2 Mounds */
-    .map-hotspot-pin:nth-of-type(12) { 
-        margin-top: 15px !important; 
-    }
+    .map-hotspot-pin:nth-of-type(12) { margin-top: 15.5px !important; }
 
     /* Pin 13: Large Sacred Circle */
-    .map-hotspot-pin:nth-of-type(13) { 
-        margin-top: 12px !important; /* Adjust this slightly up or down to match Pin 12 perfectly */
-    }
+    .map-hotspot-pin:nth-of-type(13) { margin-top: 15px !important; }
 
     .map-hover-tooltip {
         position: fixed !important;
