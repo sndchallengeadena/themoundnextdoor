@@ -449,33 +449,33 @@ img[src*="Pipe.png"] {
     }
 
     /* Precision mobile overrides: Shifts ALL pins cleanly to map landmarks */
-    /* Pin 1: Hartman Mound (Moved UP slightly) */
-    .map-hotspot-pin:nth-of-type(1) { margin-top: -5px !important; }
-    /* Pin 2: Woodruff/Connett Mounds (Moved UP slightly - matched Hartman) */
-    .map-hotspot-pin:nth-of-type(2) { margin-top: -5px !important; }
+    /* Pin 1: Hartman Mound (Moved UP by 0.5) */
+    .map-hotspot-pin:nth-of-type(1) { margin-top: -5.5px !important; }
+    /* Pin 2: Woodruff/Connett Mounds (Moved UP by 0.5) */
+    .map-hotspot-pin:nth-of-type(2) { margin-top: -5.5px !important; }
     /* Pin 3: Connett Mounds 3 & 4 (PERFECT - Left alone) */
     .map-hotspot-pin:nth-of-type(3) { margin-top: -4px !important; }
     
-    /* Pin 4: Beard/Baird/Coon Mound (Moved UP slightly) */
-    .map-hotspot-pin:nth-of-type(4) { margin-top: -14px !important; }
-    /* Pin 5: Armitage Mound (Moved UP slightly) */
-    .map-hotspot-pin:nth-of-type(5) { margin-top: -17.5px !important; }
-    /* Pin 6: Martin Mound #2 (Moved UP barely) */
-    .map-hotspot-pin:nth-of-type(6) { margin-top: -16.5px !important; }
-    /* Pin 7: Martin’s “Schoolhouse” Mound (Left alone based on your list) */
+    /* Pin 4: Beard/Baird/Coon Mound (Moved UP by 0.5) */
+    .map-hotspot-pin:nth-of-type(4) { margin-top: -14.5px !important; }
+    /* Pin 5: Armitage Mound (Moved UP by 0.5) */
+    .map-hotspot-pin:nth-of-type(5) { margin-top: -18px !important; }
+    /* Pin 6: Martin Mound #2 (Moved UP by 0.5) */
+    .map-hotspot-pin:nth-of-type(6) { margin-top: -17px !important; }
+    /* Pin 7: Martin’s “Schoolhouse” Mound (PERFECT - Left alone) */
     .map-hotspot-pin:nth-of-type(7) { margin-top: -18px !important; }
-    /* Pin 8: Dorr Mound #2 (Moved DOWN barely) */
-    .map-hotspot-pin:nth-of-type(8) { margin-top: -24px !important; }
+    /* Pin 8: Dorr Mound #2 (Moved DOWN by 0.5) */
+    .map-hotspot-pin:nth-of-type(8) { margin-top: -23.5px !important; }
     /* Pin 9: Dorr Mound #1 (PERFECT - Left alone) */
     .map-hotspot-pin:nth-of-type(9) { margin-top: -26px !important; }
     /* Pin 10: Zenner Meadows Mound (PERFECT - Left alone) */
     .map-hotspot-pin:nth-of-type(10) { margin-top: -22px !important; }
-    /* Pin 11: School Fort Ring/Sacred Ring (Moved DOWN barely) */
-    .map-hotspot-pin:nth-of-type(11) { margin-top: -21.5px !important; }
-    /* Pin 12: 3 Sacred Circles & 2 Mounds (Left alone based on your list) */
+    /* Pin 11: School Fort Ring/Sacred Ring (Moved DOWN by 0.5) */
+    .map-hotspot-pin:nth-of-type(11) { margin-top: -21px !important; }
+    /* Pin 12: 3 Sacred Circles & 2 Mounds (PERFECT - Left alone) */
     .map-hotspot-pin:nth-of-type(12) { margin-top: -28.5px !important; }
-    /* Pin 13: Large Sacred Circle (Moved UP vertically to match Pin 12 level) */
-    .map-hotspot-pin:nth-of-type(13) { margin-top: -28.5px !important; }
+    /* Pin 13: Large Sacred Circle (Matched to Pin 12 level, then moved UP 0.5) */
+    .map-hotspot-pin:nth-of-type(13) { margin-top: -29px !important; }
 
     .map-hover-tooltip {
         position: fixed !important;
