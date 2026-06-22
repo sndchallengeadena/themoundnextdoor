@@ -441,13 +441,13 @@ img[src*="Pipe.png"] {
         background-color: transparent !important;
     }
 
-    /* Surgical display swaps for phone viewports */
+    /* Surgical visibility swaps for phone viewports */
     .desktop-map-img, .map-hotspot-pin {
-        display: none !important; /* Hides original image and interactive elements */
+        display: none !important; /* Force completely removes original image and all hotspots/pins */
     }
 
     .mobile-static-map-wrapper {
-        display: block !important; /* Unlocks clean static frame container */
+        display: block !important; /* Unlocks static frame container */
         width: 100% !important;
         height: auto !important;
     }
