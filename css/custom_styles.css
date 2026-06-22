@@ -329,15 +329,14 @@ img[src*="Pipe.png"] {
 }
 
 /* Desktop Visibility States */
-.interactive-map-holder img.desktop-map-img {
+.interactive-map-holder img {
     width: 100% !important;
     height: auto !important;
     display: block !important;
 }
 
-/* CRITICAL FIX: Explicitly targets and deletes the mobile path element from desktop viewports */
-.interactive-map-holder img.mobile-map-img {
-    display: none !important; 
+.mobile-map-img {
+    display: none !important; /* Absolute hard hide on desktop viewports */
 }
 
 .map-hotspot-pin {
@@ -439,7 +438,6 @@ img[src*="Pipe.png"] {
         text-align: center !important;      
     }
 
-    /* Target era title text lines on mobile to force clear bold weight spacing */
     #main-container h2 {
         font-weight: bold !important;
         display: block !important;
@@ -458,13 +456,12 @@ img[src*="Pipe.png"] {
         background-color: transparent !important;
     }
 
-    /* CRITICAL FIX: Smoothly targeted display toggles via explicit class hooks */
     .interactive-map-holder img.desktop-map-img, .map-hotspot-pin {
-        display: none !important; /* Wipes original Desktop.png map canvas and all layout hover hotspot nodes completely */
+        display: none !important; 
     }
 
     .interactive-map-holder img.mobile-map-img {
-        display: block !important; /* Renders exclusively Mobile.png fluid vector image canvas framework */
+        display: block !important; 
         width: 100% !important;
         height: auto !important;
     }
@@ -480,4 +477,16 @@ img[src*="Pipe.png"] {
         box-sizing: border-box !important;
         z-index: 99999 !important;
     }
+}
+
+/* ==========================================================================
+   CREDIT AND CAPTION ALIGNMENT FIX
+   ========================================================================== */
+.g-credit {
+    max-width: 550px !important; /* Forces the credit to match your exact paragraph width */
+    margin: 0.5rem auto 0 auto !important; /* Centers the text bounding box perfectly */
+    text-align: left !important; /* Keeps the text left-aligned inside that centered box */
+    width: 100% !important;
+    padding: 0 1rem; /* Prevents text from hugging mobile screen edges */
+    box-sizing: border-box;
 }
