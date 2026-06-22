@@ -170,6 +170,13 @@
     "credit": ""
   },
   {
+    "type": "photo",
+    "content": "Height.png",
+    "caption": "",
+    "max_size": "body",
+    "credit": ""
+  },
+  {
     "type": "text",
     "content": "But there is a complicated side to this story. Excavation methods in the early 1900s were not exactly gentle. Mound interiors were disturbed, burial contexts were lost, and valuable information disappeared in the process. By modern standards, some of what was done to learn about the past also erased parts of it.",
     "max_size": "body"
