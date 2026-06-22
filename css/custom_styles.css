@@ -329,7 +329,7 @@ img[src*="Pipe.png"] {
 }
 
 /* Desktop Visibility States */
-.desktop-map-img {
+.interactive-map-holder img {
     width: 100% !important;
     height: auto !important;
     display: block !important;
@@ -438,6 +438,14 @@ img[src*="Pipe.png"] {
         text-align: center !important;      
     }
 
+    /* Target era title text lines on mobile to force clear bold weight spacing */
+    #main-container h2 {
+        font-weight: bold !important;
+        display: block !important;
+        margin-top: 1.75rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+
     .interactive-map-holder {
         max-width: 100% !important;
         width: 100% !important;
@@ -450,7 +458,7 @@ img[src*="Pipe.png"] {
     }
 
     /* Surgical mobile configuration switches */
-    .desktop-map-img, .map-hotspot-pin {
+    .interactive-map-holder > img, .map-hotspot-pin {
         display: none !important; /* Total removal of desktop file and pins */
     }
 
