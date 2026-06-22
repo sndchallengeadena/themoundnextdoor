@@ -84,20 +84,18 @@ function addcontent() {
                         if (item.content === 'Map.png') {
                             wrapper.classList.add('interactive-map-holder');
                             
-                            // --- BUILD DESKTOP INTERACTIVE CONTAINER ---
-                            const desktopContainer = document.createElement('div');
-                            desktopContainer.className = 'desktop-interactive-map';
-                            
+                            // --- ORIGINAL DESKTOP MAP IMAGE (Moved back up exactly as it was) ---
                             el = document.createElement('img');
                             el.src = `images/${item.content}`;
                             el.alt = item.alt || 'Interactive Adena Mound Map Layout';
                             el.style.width = '100%';
                             el.style.display = 'block';
-                            desktopContainer.appendChild(el);
+                            el.className = 'desktop-map-img'; // Class added for easy hiding on mobile
+                            wrapper.appendChild(el);
 
                             const tooltip = document.createElement('div');
                             tooltip.className = 'map-hover-tooltip';
-                            desktopContainer.appendChild(tooltip);
+                            wrapper.appendChild(tooltip);
 
                             const mapMoundsData = [
                                 {"top": "50.5%", "left": "39.7%", "title": "Hartman Mound", "info": "Largest and best preserved in The Plains."},
@@ -130,7 +128,7 @@ function addcontent() {
 
                                 pin.addEventListener('mousemove', (e) => {
                                     if (window.innerWidth > 768) {
-                                        const wrapperRect = desktopContainer.getBoundingClientRect();
+                                        const wrapperRect = wrapper.getBoundingClientRect();
                                         const x = e.clientX - wrapperRect.left + 15;
                                         const y = e.clientY - wrapperRect.top + 15;
                                         tooltip.style.left = `${x}px`;
@@ -147,21 +145,19 @@ function addcontent() {
                                     tooltip.classList.remove('visible');
                                 });
 
-                                desktopContainer.appendChild(pin);
+                                wrapper.appendChild(pin);
                             });
 
                             document.addEventListener('click', () => {
                                 tooltip.classList.remove('visible');
                             });
 
-                            wrapper.appendChild(desktopContainer);
-
-                            // --- BUILD MOBILE STATIC FALLBACK CONTAINER ---
+                            // --- SEPARATE MOBILE FALLBACK CONTAINER APPENDED AT BOTTOM ---
                             const mobileContainer = document.createElement('div');
                             mobileContainer.className = 'mobile-static-map-wrapper';
 
                             const mobileImg = document.createElement('img');
-                            mobileImg.src = 'images/MobileMap.png'; // Fixed filename string here
+                            mobileImg.src = 'images/MobileMap.png';
                             mobileImg.alt = 'Static Map of Ancient Adena Mounds in The Plains';
                             
                             mobileContainer.appendChild(mobileImg);
