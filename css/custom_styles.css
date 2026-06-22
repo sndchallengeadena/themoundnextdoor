@@ -317,14 +317,14 @@ img[src*="Pipe.png"] {
     background-color: transparent !important;
 }
 
-.desktop-interactive-map {
-    position: relative !important;
-    display: block !important;
+.desktop-map-img {
     width: 100% !important;
+    height: auto !important;
+    display: block !important;
 }
 
 .mobile-static-map-wrapper {
-    display: none !important; /* Hide static layout on desktop completely */
+    display: none !important; /* Hide layout completely on desktop execution */
 }
 
 .map-hotspot-pin {
@@ -441,13 +441,13 @@ img[src*="Pipe.png"] {
         background-color: transparent !important;
     }
 
-    /* Toggle visibility to secure static fallback map on phones */
-    .desktop-interactive-map {
-        display: none !important;
+    /* Surgical display swaps for phone viewports */
+    .desktop-map-img, .map-hotspot-pin {
+        display: none !important; /* Hides original image and interactive elements */
     }
 
     .mobile-static-map-wrapper {
-        display: block !important;
+        display: block !important; /* Unlocks clean static frame container */
         width: 100% !important;
         height: auto !important;
     }
