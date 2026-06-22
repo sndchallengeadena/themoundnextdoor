@@ -446,7 +446,7 @@ img[src*="Pipe.png"] {
     width: 28px !important;
     height: 28px !important;
     transform: translate(-50%, -50%) !important;
-    margin-top: -2px !important;
+    margin-top: -6px !important;
     }
 
     .map-hover-tooltip {
