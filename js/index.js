@@ -81,7 +81,7 @@ function addcontent() {
                         wrapper.classList.add('g-media');
                         wrapper.classList.add('g-photo-wrapper');
 
-                        if (item.content === 'Map.png') {
+                        if (item.content === 'Desktop.png') {
                             wrapper.classList.add('interactive-map-holder');
                             
                             // --- DESKTOP IMAGE ---
@@ -154,7 +154,7 @@ function addcontent() {
 
                             // --- MOBILE IMAGE ---
                             const mobileImg = document.createElement('img');
-                            mobileImg.src = 'images/MapMobile.png';
+                            mobileImg.src = 'images/Mobile.png';
                             mobileImg.alt = 'Static Map of Ancient Adena Mounds in The Plains';
                             mobileImg.className = 'mobile-map-img'; // Explicit tracking class
                             wrapper.appendChild(mobileImg);
