@@ -229,12 +229,12 @@ function addcontent() {
                         wrapper = document.createElement('div');
                         el = document.createElement('p');
                         el.innerHTML = item.content;
-                        wrapper.appendChild(el);
                         if (item.max_size && item.max_size !== 'body') {
                             wrapper.style.maxWidth = item.max_size;
                         } else if (item.max_size === 'body') {
                             wrapper.classList.add('body-size');
                         }
+                        wrapper.appendChild(el);
                         container.appendChild(wrapper);
                         lastHeadlineWrapper = null;
                         break;

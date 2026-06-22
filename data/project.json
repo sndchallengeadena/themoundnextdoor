@@ -86,7 +86,7 @@
   },
   {
     "type": "text",
-    "content": "</p></section><section class=\"make-scrolly-container era1-scrolly\"><div class=\"scrolly-visual\"><img class=\"scrolly-bg-img\" src=\"images/ERA1.png\"></div><div class=\"scrolly-story\"><div class=\"era1-step\" data-step=\"1\"><div class=\"step-content\"><p>Adena necklaces have been found made of Marginella shells sourced from the Atlantic Ocean or the Gulf of Mexico.</p></div></div><div class=\"era1-step\" data-step=\"2\"><div class=\"step-content\"><p>The Adena had trade networks stretching hundreds of miles.</p></div></div></div></section><p class=\"body\">",
+    "content": "</p></section><section class=\"make-scrolly-container era1-scrolly\"><div class=\"scrolly-visual\"><img class=\"scrolly-bg-img\" src=\"images/ERA1.png\"></div><div class=\"scrolly-story\"><div class=\"era1-step\" data-step=\"1\"><div class=\"step-content\"><p>Adena necklaces have been find made of Marginella shells sourced from the Atlantic Ocean or the Gulf of Mexico.</p></div></div><div class=\"era1-step\" data-step=\"2\"><div class=\"step-content\"><p>The Adena had trade networks stretching hundreds of miles.</p></div></div></div></section><p class=\"body\">",
     "max_size": "body",
     "credit": ""
   },

@@ -4,11 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-
     <link rel="stylesheet" href="css/base_styles.css">
     <link rel="stylesheet" href="css/base_fonts.css">
     <link rel="stylesheet" href="css/custom_styles.css">
@@ -92,7 +87,6 @@
 
     <script>
         window.addEventListener("scroll", () => {
-            // --- FRAMEWORK 1: OPENING SCROLLY (Reactivated for both desktop and mobile viewports) ---
             const presentPhoto = document.getElementById('photo-present');
             const steps = document.querySelectorAll('.step');
             
@@ -115,7 +109,6 @@
                 presentPhoto.style.opacity = (1 - fadeProgress);
             }
 
-            // --- FRAMEWORK 2: ERA 1 SINGLE IMAGE SCROLLY ---
             const era1Steps = document.querySelectorAll('.era1-step');
             if (era1Steps.length >= 2) {
                 const era1Rect1 = era1Steps[0].getBoundingClientRect();
@@ -130,7 +123,6 @@
                 }
             }
 
-            // --- FRAMEWORK 3: ERA 2 TWO-IMAGE SCROLLY ---
             const era2Photo1 = document.getElementById('photo-era2-1');
             const era2Steps = document.querySelectorAll('.era2-step');
             if (era2Photo1 && era2Steps.length >= 2) {
@@ -152,7 +144,6 @@
                 era2Photo1.style.opacity = (1 - fadeProgress2);
             }
 
-            // --- FRAMEWORK 4: ERA 3 TWO-IMAGE SCROLLY ---
             const era3Photo1 = document.getElementById('photo-era3-1');
             const era3Steps = document.querySelectorAll('.era3-step');
             if (era3Photo1 && era3Steps.length >= 2) {
@@ -174,7 +165,6 @@
                 era3Photo1.style.opacity = (1 - fadeProgress3);
             }
 
-            // --- FRAMEWORK 6: ERA 4 TWO-IMAGE SCROLLY ---
             const era4Photo1 = document.getElementById('photo-era4-1');
             const era4Steps = document.querySelectorAll('.era4-step');
             if (era4Photo1 && era4Steps.length >= 2) {
@@ -196,7 +186,6 @@
                 era4Photo1.style.opacity = (1 - fadeProgress4);
             }
 
-            // --- EXTRA FRAMEWORK: INLINE MAN SCROLLY ---
             const manSteps = document.querySelectorAll('.man-step');
             manSteps.forEach((step) => {
                 const rect = step.getBoundingClientRect();
