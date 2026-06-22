@@ -229,13 +229,13 @@ function addcontent() {
                         wrapper = document.createElement('div');
                         el = document.createElement('p');
                         el.innerHTML = item.content;
-                        container.appendChild(wrapper);
                         wrapper.appendChild(el);
                         if (item.max_size && item.max_size !== 'body') {
                             wrapper.style.maxWidth = item.max_size;
                         } else if (item.max_size === 'body') {
-                            wrapper.className = 'body-size';
+                            wrapper.classList.add('body-size');
                         }
+                        container.appendChild(wrapper);
                         lastHeadlineWrapper = null;
                         break;
                     case 'graphic':
@@ -275,7 +275,6 @@ function addcontent() {
                         }
 
                         if (item.content.includes('youtube.com') || item.content.includes('youtu.be')) {
-                            // Extract video ID accurately using regular expression
                             const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
                             const match = item.content.match(regExp);
                             const videoId = (match && match[2].length === 11) ? match[2] : null;
