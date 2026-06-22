@@ -81,9 +81,7 @@ function addcontent() {
                         wrapper.classList.add('g-media');
                         wrapper.classList.add('g-photo-wrapper');
 
-                        // Check if this is your specific map file to apply the interactive features
                         if (item.content === 'Map.png') {
-                            // Assign an explicit layout identifier class
                             wrapper.classList.add('interactive-map-holder');
                             
                             el = document.createElement('img');
@@ -93,12 +91,10 @@ function addcontent() {
                             el.style.display = 'block';
                             wrapper.appendChild(el);
 
-                            // Create the interactive floating descriptive tooltip element
                             const tooltip = document.createElement('div');
                             tooltip.className = 'map-hover-tooltip';
                             wrapper.appendChild(tooltip);
 
-                            // PERFECTLY ALIGNED TARGET COORDINATES BASED ON VIDEO COMPRESSION SCALE
                             const mapMoundsData = [
                                 {"top": "50.5%", "left": "39.7%", "title": "Hartman Mound", "info": "Largest and best preserved in The Plains."},
                                 {"top": "49%", "left": "24%", "title": "Woodruff/Connett Mounds", "info": "Second-largest standing mound in The Plains."},
@@ -115,25 +111,21 @@ function addcontent() {
                                 {"top": "88.5%", "left": "79.3%", "title": "Large Sacred Circle", "info": "There is limited confirmed knowledge about the sacred circles. These circles typically feature an interior ditch that followed the curve of the surrounding earthen wall, along with a single causewayed entrance."}
                             ];
 
-                            // Generate the hotspots and attach interactions
                             mapMoundsData.forEach(mound => {
                                 const pin = document.createElement('div');
                                 pin.className = 'map-hotspot-pin';
                                 pin.style.top = mound.top;
                                 pin.style.left = mound.left;
 
-                                // Helper function to display data cleanly
                                 const showTooltip = () => {
                                     tooltip.innerHTML = `<strong>${mound.title}</strong>${mound.info}`;
                                     tooltip.classList.add('visible');
                                 };
 
-                                // Mouse Enter (Desktop)
                                 pin.addEventListener('mouseenter', showTooltip);
 
-                                // Mouse Move (Desktop tracking)
                                 pin.addEventListener('mousemove', (e) => {
-                                    if (window.innerWidth > 768) { // Only track coordinates on desktop size screens
+                                    if (window.innerWidth > 768) {
                                         const wrapperRect = wrapper.getBoundingClientRect();
                                         const x = e.clientX - wrapperRect.left + 15;
                                         const y = e.clientY - wrapperRect.top + 15;
@@ -142,9 +134,8 @@ function addcontent() {
                                     }
                                 });
 
-                                // Click / Tap (Mobile support toggle mechanism)
                                 pin.addEventListener('click', (e) => {
-                                    e.stopPropagation(); // Stops click event from closing itself instantly
+                                    e.stopPropagation();
                                     showTooltip();
                                 });
 
@@ -155,13 +146,11 @@ function addcontent() {
                                 wrapper.appendChild(pin);
                             });
 
-                            // Close open mobile tooltips if a user taps anywhere else on the map area
                             document.addEventListener('click', () => {
                                 tooltip.classList.remove('visible');
                             });
 
                         } else {
-                            // Standard treatment for any other ordinary photos
                             el = document.createElement('img');
                             el.src = `images/${item.content}`;
                             el.alt = item.alt || '';
@@ -286,15 +275,17 @@ function addcontent() {
                         }
 
                         if (item.content.includes('youtube.com') || item.content.includes('youtu.be')) {
-                            let videoId = '';
-                            if (item.content.includes('v=')) {
-                                videoId = item.content.split('v=')[1].split('&')[0];
-                            } else if (item.content.includes('youtu.be/')) {
-                                videoId = item.content.split('youtu.be/')[1].split('?')[0];
-                            }
+                            // Bulletproof regex parsing engine to extract YouTube id smoothly
+                            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+                            const match = item.content.match(regExp);
+                            const videoId = (match && match[2].length === 11) ? match[2] : null;
 
                             el = document.createElement('iframe');
-                            el.src = `https://www.youtube.com/embed/${videoId}`;
+                            if (videoId) {
+                                el.src = `https://www.youtube.com/embed/${videoId}`;
+                            } else {
+                                console.error('Could not parse YouTube ID from:', item.content);
+                            }
                             el.width = '100%';
                             el.height = '450';
                             el.frameBorder = '0';
