@@ -449,10 +449,10 @@ img[src*="Pipe.png"] {
     }
 
     /* Precision mobile overrides: Shifts ALL pins cleanly to map landmarks */
-    /* Pin 1: Hartman Mound (Moved UP by 0.5) */
-    .map-hotspot-pin:nth-of-type(1) { margin-top: -5.5px !important; }
-    /* Pin 2: Woodruff/Connett Mounds (Moved UP by 0.5) */
-    .map-hotspot-pin:nth-of-type(2) { margin-top: -5.5px !important; }
+    /* Pin 1: Hartman Mound */
+    .map-hotspot-pin:nth-of-type(1) { margin-top: -6px !important; }
+    /* Pin 2: Woodruff/Connett Mounds */
+    .map-hotspot-pin:nth-of-type(2) { margin-top: -6px !important; }
     /* Pin 3: Connett Mounds 3 & 4 (PERFECT - Left alone) */
     .map-hotspot-pin:nth-of-type(3) { margin-top: -4px !important; }
     
@@ -473,9 +473,9 @@ img[src*="Pipe.png"] {
     /* Pin 11: School Fort Ring/Sacred Ring (Moved DOWN by 0.5) */
     .map-hotspot-pin:nth-of-type(11) { margin-top: -21px !important; }
     /* Pin 12: 3 Sacred Circles & 2 Mounds (PERFECT - Left alone) */
-    .map-hotspot-pin:nth-of-type(12) { margin-top: -28.5px !important; }
+    .map-hotspot-pin:nth-of-type(12) { margin-top: -28px !important; }
     /* Pin 13: Large Sacred Circle (Matched to Pin 12 level, then moved UP 0.5) */
-    .map-hotspot-pin:nth-of-type(13) { margin-top: -29px !important; }
+    .map-hotspot-pin:nth-of-type(13) { margin-top: -28.5px !important; }
 
     .map-hover-tooltip {
         position: fixed !important;
