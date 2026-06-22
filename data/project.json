@@ -73,8 +73,8 @@
     "credit": ""
   },
   {
-    "type": "subhead",
-    "content": "Before Ohio Had its Name",
+    "type": "text",
+    "content": "<b>Before Ohio Had its Name</b>",
     "max_size": "body",
     "credit": ""
   },
@@ -122,8 +122,8 @@
     "credit": ""
   },
   {
-    "type": "subhead",
-    "content": "New Neighbors Arrive",
+    "type": "text",
+    "content": "<b>New Neighbors Arrive</b>",
     "max_size": "body",
     "credit": ""
   },
@@ -158,8 +158,8 @@
     "credit": ""
   },
   {
-    "type": "subhead",
-    "content": "William C. Mills Shows Up",
+    "type": "text",
+    "content": "<b>William C. Mills Shows Up</b>",
     "max_size": "body",
     "credit": ""
   },
@@ -213,8 +213,8 @@
     "credit": ""
   },
   {
-    "type": "subhead",
-    "content": "Roads, Suburbs, and Mound Loss",
+    "type": "text",
+    "content": "<b>Roads, Suburbs, and Mound Loss</b>",
     "max_size": "body",
     "credit": ""
   },
