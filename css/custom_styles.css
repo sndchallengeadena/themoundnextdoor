@@ -4,7 +4,6 @@
 
 .scrolly-container {
     position: relative;
-    /* Forces the opening sequence to break out of parent wrappers and span edge-to-edge */
     width: 100vw !important;
     left: 50% !important;
     right: 50% !important;
@@ -329,15 +328,15 @@ img[src*="Pipe.png"] {
     background-color: transparent !important;
 }
 
-/* Desktop mapping parameters (reverted completely to original properties) */
-.interactive-map-holder img {
+/* Desktop Visibility States */
+.desktop-map-img {
     width: 100% !important;
     height: auto !important;
     display: block !important;
 }
 
-.mobile-static-map-wrapper {
-    display: none !important; /* Strictly hidden on desktop */
+.mobile-map-img {
+    display: none !important; /* Absolute hard hide on desktop viewports */
 }
 
 .map-hotspot-pin {
@@ -395,7 +394,6 @@ img[src*="Pipe.png"] {
    MOBILE-ONLY RESPONSIVE OVERRIDES
    ========================================================================== */
 @media (max-width: 768px) {
-    /* Breakout viewport logic to force opening scrolly to hit 100% full bleed edges */
     main > .scrolly-container {
         width: 100vw !important;
         position: relative !important;
@@ -419,7 +417,6 @@ img[src*="Pipe.png"] {
         margin-top: -100vh !important;
     }
 
-    /* Centers the card wrapper container grid perfectly on mobile devices */
     .step {
         height: 100vh !important;
         display: flex !important;
@@ -428,7 +425,6 @@ img[src*="Pipe.png"] {
         padding: 1.5rem !important;
     }
 
-    /* Centers text internal alignment and wipes away the grey border double artifact outline lines */
     .step-content {
         max-width: 88% !important;
         width: 100% !important;
@@ -442,7 +438,6 @@ img[src*="Pipe.png"] {
         text-align: center !important;      
     }
 
-    /* Native mobile image containers matching your working configuration */
     .interactive-map-holder {
         max-width: 100% !important;
         width: 100% !important;
@@ -454,21 +449,15 @@ img[src*="Pipe.png"] {
         background-color: transparent !important;
     }
 
-    /* Surgical mobile swap logic */
-    .interactive-map-holder > img, .map-hotspot-pin {
-        display: none !important; /* Hides original desktop image and ALL hotspots/interactive pins on mobile version */
+    /* Surgical mobile configuration switches */
+    .desktop-map-img, .map-hotspot-pin {
+        display: none !important; /* Total removal of desktop file and pins */
     }
 
-    .mobile-static-map-wrapper {
-        display: block !important; /* Displays custom fluid image wrapper container box frame */
+    .mobile-map-img {
+        display: block !important; /* Smooth tracking activation for mobile file path */
         width: 100% !important;
         height: auto !important;
-    }
-
-    .mobile-static-map-wrapper img {
-        width: 100% !important;
-        height: auto !important;
-        display: block !important;
     }
 
     .map-hover-tooltip {

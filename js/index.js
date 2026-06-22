@@ -84,12 +84,13 @@ function addcontent() {
                         if (item.content === 'Map.png') {
                             wrapper.classList.add('interactive-map-holder');
                             
-                            // --- ORIGINAL DESKTOP MAP IMAGE (Completely back to original format) ---
+                            // --- DESKTOP IMAGE ---
                             el = document.createElement('img');
                             el.src = `images/${item.content}`;
                             el.alt = item.alt || 'Interactive Adena Mound Map Layout';
                             el.style.width = '100%';
                             el.style.display = 'block';
+                            el.className = 'desktop-map-img'; // Explicit tracking class
                             wrapper.appendChild(el);
 
                             const tooltip = document.createElement('div');
@@ -151,16 +152,12 @@ function addcontent() {
                                 tooltip.classList.remove('visible');
                             });
 
-                            // --- MOBILE FALLBACK ---
-                            const mobileContainer = document.createElement('div');
-                            mobileContainer.className = 'mobile-static-map-wrapper';
-
+                            // --- MOBILE IMAGE ---
                             const mobileImg = document.createElement('img');
                             mobileImg.src = 'images/MapMobile.png';
                             mobileImg.alt = 'Static Map of Ancient Adena Mounds in The Plains';
-                            
-                            mobileContainer.appendChild(mobileImg);
-                            wrapper.appendChild(mobileContainer);
+                            mobileImg.className = 'mobile-map-img'; // Explicit tracking class
+                            wrapper.appendChild(mobileImg);
 
                         } else {
                             el = document.createElement('img');
